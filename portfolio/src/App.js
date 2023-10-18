@@ -1,5 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Skills from './pages/Skills';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -18,7 +21,14 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <h1>WELCOME</h1>
+      <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
