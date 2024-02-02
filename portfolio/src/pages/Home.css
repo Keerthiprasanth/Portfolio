@@ -1,9 +1,19 @@
 .home{
-    justify-content: center;
-    align-items: center;
+    display: flex;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
 }
 
 .background-image {
-    background-image: url('../images/animated_software-engineer.png');
+    display: flex 1;
+    background-image: url('../images/1687293259007.jpg');
+    background-size:cover;
+    background-position: center;
+    height: 85vh; 
+    width: 250vh;
+  }
+
+.home_content {
+    display: flex 1;
+    font-size: 50px;
 }
