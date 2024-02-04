@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    background-color: rgb(197, 86, 86);
+    background-color: rgb(86, 164, 197);
 }
 
 .title{
@@ -18,8 +18,16 @@
 
 .home_link,
 .skills_link,
-.conatact_link
+.contact_link
  {
     padding-right: 10%;
     display: flex 1;
+    color: white; /* Set text color for the links */
+  text-decoration: none;
+}
+
+.home_link:hover,
+.skills_link:hover,
+.contact_link:hover {
+  text-decoration: underline; /* Add underline on hover */
 }
