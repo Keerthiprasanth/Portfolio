@@ -1,4 +1,8 @@
-.navbar {
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* .navbar {
     align-items: center;
     display: flex;
     justify-content: space-evenly;
@@ -22,14 +26,14 @@
  {
     padding-right: 10%;
     display: flex 1;
-    color: white; /* Set text color for the links */
+    color: white; 
   text-decoration: none;
 }
 
 .home_link:hover,
 .skills_link:hover,
 .contact_link:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline; 
 }
 
 .home {
@@ -48,8 +52,6 @@
   }
   
   .background-image {
-    /* Add styles for your background image here */
-    /* For example: */
     background-image: url('./images/1687293259007.jpg');
     background-size: cover;
     background-position: center;
@@ -58,10 +60,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* to place it behind other content */
+    z-index: -1; 
   }
-
-  /* Skills.css */
 
 .skills {
     text-align: center;
@@ -69,7 +69,7 @@
   }
   
   .skills h1 {
-    color: #333; /* Set your preferred text color */
+    color: #333; 
   }
   
   .skills ul {
@@ -79,46 +79,61 @@
   
   .skills li {
     font-size: 1.2em;
-    color: #555; /* Set your preferred text color */
+    color: #555; 
     margin-top: 10px;
     padding: 8px;
-    border: 1px solid #ddd; /* Add a border to each list item */
-    border-radius: 5px; /* Add border-radius for rounded corners */
-    background-color: #f9f9f9; /* Set a light background color */
-    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease; 
   }
   
   .skills li:hover {
-    background-color: #e0e0e0; /* Change background color on hover */
+    background-color: #e0e0e0; 
   }
-  
-  /* Add any additional styles you may need */
-  /* Contact.css */
 
 .contact {
     text-align: center;
     padding: 20px;
-    background-color: #f9f9f9; /* Set a light background color */
+    background-color: #f9f9f9; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 100vh;
   }
   
   .contact_content h1 {
-    color: #333; /* Set your preferred text color */
+    color: #333;
   }
   
   .contact_content h2 {
     font-size: 1.2em;
-    color: #555; /* Set your preferred text color */
+    color: #555; 
     margin-top: 10px;
   }
   
   .contact_content h3 {
     font-size: 1em;
-    color: #777; /* Set your preferred text color */
+    color: #777; 
     margin-top: 5px;
   }
-  
-  /* Add any additional styles you may need */
+   */
+
+   @media screen and (max-width:600px) {
+    
+    .navbar {
+      font-size: 0.75em;
+    }
+
+    .h1 {
+      font-size: 1.25em;
+    }
+
+    .header {
+      font-size: 1.5em;
+    }
+
+    .content {
+      font-size: .8em;
+    }
+  }
   
