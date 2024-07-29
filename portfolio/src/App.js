@@ -1,19 +1,23 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import "./App.css";
-import { FaArrowAltCircleDown } from "react-icons/fa";
-import Project from "./Project";
-import MyTimeline from "./Timeline";
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import TCS_logo from "./images/TCS_logo.png";
-import UOL_logo from "./images/UOL_logo.png";
-import SKASC_logo from "./images/SKASC_logo.avif";
+// import { FaArrowAltCircleDown } from "react-icons/fa";
+import Project from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Hobbies from "./pages/Hobbies";
+import Home from "./pages/Home";
+import Timeline from "./pages/Timeline";
+import Skills from "./pages/Skills";
+// import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+// import 'react-vertical-timeline-component/style.min.css';
+// import TCS_logo from "./images/TCS_logo.png";
+// import UOL_logo from "./images/UOL_logo.png";
+// import SKASC_logo from "./images/SKASC_logo.avif";
 
 function Navbar() {
   return (
-    <nav className="navbar bg-gray-800 text-white p-4 flex items-center justify-between fixed w-full z-10 top-0">
+    <nav className="navbar bg-gray-800 text-white p-4 flex items-center justify-between fixed w-full z-10 top-0 opacity-5">
       <h1 className="h1 text-xl lg:text-2xl font-bold">KEERTHI PRASANTH RAVICHANDRAN</h1>
       <div className="flex space-x-10">
         <Link className="hover:text-gray-300" to="#home">
@@ -38,100 +42,100 @@ function Navbar() {
 }
 
 function App() {
-  const skillsList = [
-    "HTML",
-    "CSS",
-    "Java",
-    "XML",
-    "Android Studio",
-    "JavaScript",
-    "React.js",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Tailwind CSS",
-    "Bootstrap",
-    "Software Testing - Randoop",
-    "Git",
-    "GitHub",
-  ];
+  // const skillsList = [
+  //   "HTML",
+  //   "CSS",
+  //   "Java",
+  //   "XML",
+  //   "Android Studio",
+  //   "JavaScript",
+  //   "React.js",
+  //   "Node.js",
+  //   "Express.js",
+  //   "MongoDB",
+  //   "Tailwind CSS",
+  //   "Bootstrap",
+  //   "Software Testing - Randoop",
+  //   "Git",
+  //   "GitHub",
+  // ];
 
-  const [stats, setStats] = useState(null);
+  // const [stats, setStats] = useState(null);
 
-  useEffect(() => {
-    fetch("https://api.chess.com/pub/player/keerthiprasanthr/stats")
-      .then((response) => response.json())
-      .then((data) => setStats(data))
-      .catch((error) => console.error("Error fetching stats:", error));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://api.chess.com/pub/player/keerthiprasanthr/stats")
+  //     .then((response) => response.json())
+  //     .then((data) => setStats(data))
+  //     .catch((error) => console.error("Error fetching stats:", error));
+  // }, []);
 
-  const [leetcodeStats, setLeetcodeStats] = useState(null);
+  // const [leetcodeStats, setLeetcodeStats] = useState(null);
 
-  useEffect(() => {
-    fetch("https://leetcode-stats-api.herokuapp.com/keerthi_prasanth")
-      .then((response) => response.json())
-      .then((data) => setLeetcodeStats(data))
-      .catch((error) => console.error("Error fetching LeetCode stats:", error));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://leetcode-stats-api.herokuapp.com/keerthi_prasanth")
+  //     .then((response) => response.json())
+  //     .then((data) => setLeetcodeStats(data))
+  //     .catch((error) => console.error("Error fetching LeetCode stats:", error));
+  // }, []);
 
-  const projects = [
-    {
-      title: "iGSE – An Energy Tool",
-      tools: "Android Studio, Java, MongoDB",
-      shortDescription:
-        "Enabled users to submit energy and gas consumption readings, reducing data entry time and minimizing errors, resulting in higher data accuracy. Established an automated bill-generating system based on submitted readings, leading to a 55% reduction in billing errors and increased billing accuracy.",
-    },
-    {
-      title: "Preference-based Group Allocation System",
-      tools: "React.js, Node.js, Express.js, MongoDB",
-      shortDescription: "Facilitated group allocation for the ‘Personal and Group Skills’ module at the University of Leicester, resulting in a 50% reduction in allocation time and increased user satisfaction by 35%. Developed an efficient group allocation algorithm considering user preferences and enhancing group formation. Implemented robust data security measures, including bcrypt hashing for secure password storage and JWT (JSON Web Token) for user authentication, ensuring data security and privacy.",
-    },
-    {
-      title: "Break-Up (An alternative to Split-Wise)",
-      tools: "Java, MongoDB, Randoop",
-      shortDescription:
-        "Led a team of six as Scrum Master in the collaborative development of a bill-splitting application, ensuring efficient task allocation, progress tracking, and timely delivery of project milestones. Achieved a remarkable test coverage of 95% for 84 methods using Randoop and White-box testing. Engineered effective teamwork dynamics through structured stand-up meetings, sprint planning sessions, and retrospectives. Designed and executed a file access alert system to monitor and report file access activities. Streamlined communication channels using JIRA, resulting in a 30% reduction in project turnaround time.",
-    },
-    {
-      title: "Encryption Software",
-      tools: "Java, MySQL",
-      shortDescription:
-        "Integrated MySQL for efficient management and storage of access logs, ensuring data integrity and accessibility. Developed robust encryption software focusing on the secure handling and storage of sensitive information.",
-    },
-  ];
+  // const projects = [
+  //   {
+  //     title: "iGSE – An Energy Tool",
+  //     tools: "Android Studio, Java, MongoDB",
+  //     shortDescription:
+  //       "Enabled users to submit energy and gas consumption readings, reducing data entry time and minimizing errors, resulting in higher data accuracy. Established an automated bill-generating system based on submitted readings, leading to a 55% reduction in billing errors and increased billing accuracy.",
+  //   },
+  //   {
+  //     title: "Preference-based Group Allocation System",
+  //     tools: "React.js, Node.js, Express.js, MongoDB",
+  //     shortDescription: "Facilitated group allocation for the ‘Personal and Group Skills’ module at the University of Leicester, resulting in a 50% reduction in allocation time and increased user satisfaction by 35%. Developed an efficient group allocation algorithm considering user preferences and enhancing group formation. Implemented robust data security measures, including bcrypt hashing for secure password storage and JWT (JSON Web Token) for user authentication, ensuring data security and privacy.",
+  //   },
+  //   {
+  //     title: "Break-Up (An alternative to Split-Wise)",
+  //     tools: "Java, MongoDB, Randoop",
+  //     shortDescription:
+  //       "Led a team of six as Scrum Master in the collaborative development of a bill-splitting application, ensuring efficient task allocation, progress tracking, and timely delivery of project milestones. Achieved a remarkable test coverage of 95% for 84 methods using Randoop and White-box testing. Engineered effective teamwork dynamics through structured stand-up meetings, sprint planning sessions, and retrospectives. Designed and executed a file access alert system to monitor and report file access activities. Streamlined communication channels using JIRA, resulting in a 30% reduction in project turnaround time.",
+  //   },
+  //   {
+  //     title: "Encryption Software",
+  //     tools: "Java, MySQL",
+  //     shortDescription:
+  //       "Integrated MySQL for efficient management and storage of access logs, ensuring data integrity and accessibility. Developed robust encryption software focusing on the secure handling and storage of sensitive information.",
+  //   },
+  // ];
 
-  const items = [
-    {
-      id: 1,
-      title: 'MSc. Advanced Software Engineering – Merit (2:1)',
-      location: 'University of Leicester, Leicester, UK',
-      date: 'Sept 2022 - Jan 2024',
-      icon: UOL_logo,
-      content: 'Modules: Mobile and Web Applications, Advanced Web Technologies, Software Measurement and Quality Assurance, Interactive Development and User Experience',
-    },
-    {
-      id: 2,
-      title: 'Graduate Trainee',
-      location: 'Tata Consultancy Services(TCS), Chennai, India',
-      date: 'Aug 2021 - Sept 2022',
-      icon: TCS_logo,
-      content: 'Gained proficiency in Java, JavaScript, HTML, CSS, and Python through immersive training. Developed a gaming map using Blender and Unity, focusing on 3D modeling and game development. Managed and maintained lease documents for US clients using IBM’s Tririga software, ensuring data accuracy and compliance. Enhanced application performance and functionality using Java.',
-    },
-    {
-      id: 3,
-      title: 'BSc. Computer Science and Application - Distinction',
-      location: 'Sri Krishna College of Arts and Science, Coimbatore, India',
-      date: 'June 2018 - May 2021',
-      icon: SKASC_logo,
-      content: 'Modules: Software Engineering, Mobile Application Development, Data Structures and Algorithms, Java, Python, Operating System, Digital Fundamentals and Architecture, Data Communication and Networks',
-    }
-  ];
+  // const items = [
+  //   {
+  //     id: 1,
+  //     title: 'MSc. Advanced Software Engineering – Merit (2:1)',
+  //     location: 'University of Leicester, Leicester, UK',
+  //     date: 'Sept 2022 - Jan 2024',
+  //     icon: UOL_logo,
+  //     content: 'Modules: Mobile and Web Applications, Advanced Web Technologies, Software Measurement and Quality Assurance, Interactive Development and User Experience',
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'Graduate Trainee',
+  //     location: 'Tata Consultancy Services (TCS), Chennai, India',
+  //     date: 'Aug 2021 - Sept 2022',
+  //     icon: TCS_logo,
+  //     content: 'Gained proficiency in Java, JavaScript, HTML, CSS, and Python through immersive training. Developed a gaming map using Blender and Unity, focusing on 3D modeling and game development. Managed and maintained lease documents for US clients using IBM’s Tririga software, ensuring data accuracy and compliance. Enhanced application performance and functionality using Java.',
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'BSc. Computer Science and Application - Distinction',
+  //     location: 'Sri Krishna College of Arts and Science, Coimbatore, India',
+  //     date: 'June 2018 - May 2021',
+  //     icon: SKASC_logo,
+  //     content: 'Modules: Software Engineering, Mobile Application Development, Data Structures and Algorithms, Java, Python, Operating System, Digital Fundamentals and Architecture, Data Communication and Networks',
+  //   }
+  // ];
 
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <section
+        {/* <section
           className="p-4 lg:p-8 lg:pt-20 min-h-screen flex flex-col justify-center items-center bg-gray-100"
           id="home"
         >
@@ -170,9 +174,10 @@ function App() {
               <FaArrowAltCircleDown className="text-4xl" />
             </Link>
           </div>
-        </section>
+        </section> */}
+        <Home />
 
-        <section
+        {/* <section
           className="p-8 h-screen flex flex-col justify-center items-center bg-gray-200"
           id="skills"
         >
@@ -216,9 +221,10 @@ function App() {
               Check out my projects below
             </Link>
           </div>
-        </section>
+        </section> */}
+        <Skills/> 
 
-        <section
+        {/* <section
           className="p-8 h-auto flex flex-col justify-center items-center bg-gray-100"
           id="projects"
         >
@@ -253,12 +259,10 @@ function App() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
+        <Project/>
 
-<section className="p-8 h-screen flex flex-col justify-center items-center bg-gray-200"></section>
-
-        <section id="timeline" className="p-8 h-screen flex flex-col justify-center items-center bg-gray-500">
-          {/* <MyTimeline /> */}
+        {/* <section id="timeline" className="p-8 h-screen flex flex-col justify-center items-center bg-gray-500">
           <div className="max-w-3xl text-center mb-8">
             <h1 className="text-3xl text-gray-800 mb-8 font-semibold">Timeline</h1>
             <VerticalTimeline>
@@ -280,9 +284,10 @@ function App() {
                         }
             </VerticalTimeline>
           </div>
-        </section>
+        </section> */}
+        <Timeline/>
 
-        <section className="p-8 h-screen flex flex-col justify-center items-center bg-gray-200"></section>
+        {/* <section className="p-8 h-screen flex flex-col justify-center items-center bg-gray-200"></section>
 
         <section
           className="p-8 h-screen flex flex-col justify-center items-center bg-gray-200"
@@ -406,9 +411,10 @@ function App() {
               )}
             </div>
           </div>
-        </section>
+        </section> */}
+        <Hobbies/>
 
-        <section
+        {/* <section
           className="p-8 h-screen flex flex-col justify-center items-center bg-gray-100"
           id="contact"
         >
@@ -458,7 +464,8 @@ function App() {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
+        <Contact/>
         <footer className="bg-gray-800 text-white p-4 text-center w-full">
           <div className="max-w-lg mx-auto">
             <p className="text-lg">
