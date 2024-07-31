@@ -4,7 +4,7 @@ function Contact() {
   return (
     <div>
               <section
-          className="p-8 h-screen flex flex-col justify-center items-center bg-gray-100"
+          className="p-8 h-screen flex flex-col justify-center items-center bg-gray-200"
           id="contact"
         >
           <h1 className="text-3xl text-gray-800 mb-8 font-semibold">

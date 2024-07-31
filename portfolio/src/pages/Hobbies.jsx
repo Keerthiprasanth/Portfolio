@@ -22,7 +22,7 @@ function Hobbies() {
   return (
     <div>
       <section
-        className="p-8 h-auto flex flex-col justify-center items-center bg-gray-200"
+        className="p-8 h-auto flex flex-col justify-center items-center bg-gray-100"
         id="hobbies"
       >
         <div className="max-w-3xl text-center mb-8">
@@ -35,7 +35,7 @@ function Hobbies() {
         </div>
 
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-gray-100 p-4 rounded-lg">
+          <div className="bg-gray-200 p-4 rounded-lg">
             <h1 className="text-3xl font-semibold text-gray-800 mb-4">
               Chess.com Stats
             </h1>
@@ -46,7 +46,7 @@ function Hobbies() {
             </p>
             {stats ? (
               <div className="grid grid-cols-2 gap-8">
-                <div className="bg-gray-200 p-4 rounded-lg">
+                <div className="bg-gray-100 p-4 rounded-lg">
                   <h2 className="text-xl font-semibold text-gray-700 mb-2">
                     Rapid Chess
                   </h2>
@@ -56,7 +56,7 @@ function Hobbies() {
                   <p>Losses: {stats.chess_rapid?.record?.loss || "NA"}</p>
                   <p>Draws: {stats.chess_rapid?.record?.draw || "NA"}</p>
                 </div>
-                <div className="bg-gray-200 p-4 rounded-lg">
+                <div className="bg-gray-100 p-4 rounded-lg">
                   <h2 className="text-xl font-semibold text-gray-700 mb-2">
                     Blitz Chess
                   </h2>
@@ -66,7 +66,7 @@ function Hobbies() {
                   <p>Losses: {stats.chess_blitz?.record?.loss || "NA"}</p>
                   <p>Draws: {stats.chess_blitz?.record?.draw || "NA"}</p>
                 </div>
-                <div className="bg-gray-200 p-4 rounded-lg">
+                <div className="bg-gray-100 p-4 rounded-lg">
                   <h2 className="text-xl font-semibold text-gray-700 mb-2">
                     Tactics
                   </h2>
@@ -75,7 +75,7 @@ function Hobbies() {
                   </p>
                   <p>Lowest Rating: {stats.tactics?.lowest?.rating || "NA"}</p>
                 </div>
-                <div className="bg-gray-200 p-4 rounded-lg">
+                <div className="bg-gray-100 p-4 rounded-lg">
                   <h2 className="text-xl font-semibold text-gray-700 mb-2">
                     Puzzle Rush
                   </h2>
@@ -88,7 +88,7 @@ function Hobbies() {
             )}
           </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg">
+          <div className="bg-gray-200 p-4 rounded-lg">
             <h1 className="text-3xl font-semibold text-gray-800 mb-4">
               Leetcode Stats
             </h1>

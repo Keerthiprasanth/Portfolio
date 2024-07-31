@@ -1,8 +1,10 @@
-// import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./App.css";
 // import { FaArrowAltCircleDown } from "react-icons/fa";
+import Navbar from "./components/Navbar";
 import Project from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Hobbies from "./pages/Hobbies";
@@ -15,29 +17,48 @@ import Skills from "./pages/Skills";
 // import UOL_logo from "./images/UOL_logo.png";
 // import SKASC_logo from "./images/SKASC_logo.avif";
 
-function Navbar() {
+function Nav() {
+  // const [isOpen, setIsOpen] = useState(false);
+
+  // const toggleDropdown = () => {
+  //   setIsOpen(!isOpen);
+  // };
+
   return (
-    <nav className="navbar bg-gray-800 text-white p-4 flex items-center justify-between fixed w-full z-10 top-0 opacity-5">
-      <h1 className="h1 text-xl lg:text-2xl font-bold">KEERTHI PRASANTH RAVICHANDRAN</h1>
-      <div className="flex space-x-10">
-        <Link className="hover:text-gray-300" to="#home">
-          HOME
-        </Link>
-        <Link className="hover:text-gray-300" to="#skills">
-          SKILLS
-        </Link>
-        <Link className="hover:text-gray-300" to="#projects">
-          PROJECTS
-        </Link>
-        <Link className="hover:text-gray-300" to="#timeline">TIMELINE</Link>
-        <Link className="hover:text-gray-300" to="#hobbies">
-          HOBBIES
-        </Link>
-        <Link className="hover:text-gray-300" to="#contact">
-          CONTACT
-        </Link>
-      </div>
-    </nav>
+    <React.Fragment>
+      <Navbar/>
+    </React.Fragment>
+  //   <nav className="navbar bg-gray-800 text-white p-4 flex items-center justify-between fixed w-full z-10 top-0 opacity-100">
+  //   <h1 className="h1 text-xl lg:text-2xl font-bold">
+  //     KEERTHI PRASANTH RAVICHANDRAN
+  //   </h1>
+  //   <button
+  //     className="text-white lg:hidden"
+  //     onClick={toggleDropdown}
+  //   >
+  //     {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+  //   </button>
+  //   <div className={`flex flex-col lg:flex-row lg:items-center lg:space-x-10 ${isOpen ? "block" : "hidden"} lg:block`}>
+  //     <Link className="hover:text-gray-300" to="#home">
+  //       HOME
+  //     </Link>
+  //     <Link className="hover:text-gray-300" to="#skills">
+  //       SKILLS
+  //     </Link>
+  //     <Link className="hover:text-gray-300" to="#projects">
+  //       PROJECTS
+  //     </Link>
+  //     <Link className="hover:text-gray-300" to="#timeline">
+  //       TIMELINE
+  //     </Link>
+  //     <Link className="hover:text-gray-300" to="#hobbies">
+  //       HOBBIES
+  //     </Link>
+  //     <Link className="hover:text-gray-300" to="#contact">
+  //       CONTACT
+  //     </Link>
+  //   </div>
+  // </nav>
   );
 }
 
@@ -222,7 +243,7 @@ function App() {
             </Link>
           </div>
         </section> */}
-        <Skills/> 
+        <Skills />
 
         {/* <section
           className="p-8 h-auto flex flex-col justify-center items-center bg-gray-100"
@@ -260,7 +281,7 @@ function App() {
             ))}
           </div>
         </section> */}
-        <Project/>
+        <Project />
 
         {/* <section id="timeline" className="p-8 h-screen flex flex-col justify-center items-center bg-gray-500">
           <div className="max-w-3xl text-center mb-8">
@@ -285,7 +306,7 @@ function App() {
             </VerticalTimeline>
           </div>
         </section> */}
-        <Timeline/>
+        <Timeline />
 
         {/* <section className="p-8 h-screen flex flex-col justify-center items-center bg-gray-200"></section>
 
@@ -412,7 +433,7 @@ function App() {
             </div>
           </div>
         </section> */}
-        <Hobbies/>
+        <Hobbies />
 
         {/* <section
           className="p-8 h-screen flex flex-col justify-center items-center bg-gray-100"
@@ -465,7 +486,7 @@ function App() {
             </div>
           </div>
         </section> */}
-        <Contact/>
+        <Contact />
         <footer className="bg-gray-800 text-white p-4 text-center w-full">
           <div className="max-w-lg mx-auto">
             <p className="text-lg">

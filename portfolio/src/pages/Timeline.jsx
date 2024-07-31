@@ -35,7 +35,7 @@ function Timeline() {
     
   return (
     <div>
-      <section id="timeline" className="p-8 h-auto flex flex-col justify-center items-center bg-gray-500">
+      <section id="timeline" className="p-8 h-auto flex flex-col justify-center items-center bg-gray-200">
           {/* <MyTimeline /> */}
           <div className="max-w-3xl text-center mb-8">
             <h1 className="text-3xl text-gray-800 mb-8 font-semibold">Timeline</h1>
@@ -49,9 +49,9 @@ function Timeline() {
                               iconStyle={{ background: '#ffffff' }}
                               icon={<img src={element.icon} alt="icon" className="w-full h-full" />}
                               >
-                                <h3 className="vertical-timeline-element-title">{element.title}</h3>
-                                <h5 className="vertical-timeline-element-subtitle">{element.location}</h5>
-                                <p className="transition-opacity duration-300 opacity-20 group-hover:opacity-100">{element.content}</p>
+                                <h3 className="vertical-timeline-element-title font-bold">{element.title}</h3>
+                                <h5 className="vertical-timeline-element-subtitle font-bold">{element.location}</h5>
+                                <p className="transition-opacity duration-300 opacity-80 group-hover:opacity-100">{element.content}</p>
                               </VerticalTimelineElement>
                             )
                           })

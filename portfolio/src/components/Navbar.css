@@ -1,33 +1,81 @@
-.navbar {
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    background-color: rgb(86, 164, 197);
+*{
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.title{
-    margin-left: 10%;
-    flex: 1;
+:root{
+  --mainColor: #29335C;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #DB2B39;
+  --textColor: #eee;
 }
 
-.links { 
-    flex: 1;
-    justify-content: space-between;
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: var(--mainColor);
+  color: var(--textColor);
 }
 
-.home_link,
-.skills_link,
-.contact_link
- {
-    padding-right: 10%;
-    display: flex 1;
-    color: white; /* Set text color for the links */
+nav a{
+  margin: 0 2rem;
+  color: var(--textColor);
   text-decoration: none;
 }
 
-.home_link:hover,
-.skills_link:hover,
-.contact_link:hover {
-  text-decoration: underline; /* Add underline on hover */
+nav a:hover{
+  color: var(--secondaryColor);
+}
+
+header .nav-btn{
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1024px){
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5 rem;
+    background-color: var(--mainColor);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  header .responsive_nav{
+    transform: none;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2 r
+  }
+
+  nav a{
+    font-size: 1.5rem;
+  }
 }

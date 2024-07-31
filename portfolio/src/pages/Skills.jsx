@@ -23,7 +23,7 @@ function Skills() {
   return (
     <div>
       <section
-          className="p-8 h-screen flex flex-col justify-center items-center bg-gray-200"
+          className="p-8 h-auto flex flex-col justify-center items-center bg-gray-200"
           id="skills"
         >
           <h1 className="text-3xl text-gray-800 mb-8 font-semibold">Skills</h1>
