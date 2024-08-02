@@ -16,11 +16,11 @@ function Navbar() {
       <h1>KP</h1>
       <nav ref={navRef}>
         <a className="m-0 mx-6 hover:text-yellow-500" href="/#">Home</a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#">Home</a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#">Home</a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#">Home</a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#">Home</a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#">Home</a>
+        <a className="m-0 mx-6 hover:text-yellow-500" href="/#skills">Skills</a>
+        <a className="m-0 mx-6 hover:text-yellow-500" href="/#projects">Projects</a>
+        <a className="m-0 mx-6 hover:text-yellow-500" href="/#timeline">Timeline</a>
+        <a className="m-0 mx-6 hover:text-yellow-500" href="/#hobbies">Hobbies</a>
+        <a className="m-0 mx-6 hover:text-yellow-500" href="/#contact">Contact</a>
         <button className="nav-btn nav-close-btn p-1 cursor-pointer bg-transparent border-none outline-none decoration-red-700 invisible opacity-0 text-base" onClick={showNavbar}>
           <FaTimes/>
         </button>

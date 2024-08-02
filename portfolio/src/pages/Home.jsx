@@ -1,20 +1,40 @@
+import { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { FaArrowAltCircleDown } from "react-icons/fa";
+import Typewriter from "typewriter-effect";
 
 import React from 'react'
+import { useSearchParams } from "react-router-dom";
 
 function Home() {
+    const [state] = useState([
+        "Software Developer"
+    ])
   return (
     <div>
       <section
-          className="p-4 lg:p-8 lg:pt-20 min-h-screen flex flex-col justify-center items-center bg-gray-100"
+          className="grid gap-8 md:grid-cols-2 md:items-center md:text-center min-h-screen md:p-14 sm:max-xl:p-9 bg-gray-100"
           id="home"
         >
-          <div className="content text-lg lg:text-xl text-gray-700 max-w-xl lg:max-w-2xl px-4 lg:pr-8 text-center lg:text-left mb-8 lg:mb-0">
-            <h1 className="header text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-6">
+          <div>
+            <img className="p-4" src="https://thumbs.dreamstime.com/b/web-design-icon-website-webpage-developer-editable-stroke-vector-icon-web-design-icon-website-webpage-developer-editable-stroke-289252930.jpg" alt="" className="w-full rounded-lg"></img>
+            </div>
+          <div className="text-lg lg:text-2xl text-gray-700 max-w-xl lg:max-w-2xl px-4 text-center mb-16">
+            
+            <h1 className="text-xl  text-gray-800 mb-6">
               Hello and welcome to my portfolio!
             </h1>
-            <p className="mb-4">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-1">Keerthi Prasanth Ravichandran</h1>
+
+            <Typewriter className="text-xl  text-gray-800" options={{
+              autoStart: true,
+              loop: true,
+              delay: 80,
+              strings: "Software Developer"
+            }
+
+            }/>
+            {/* <p className="mb-4">
               I'm{" "}
               <span className="font-bold">Keerthi Prasanth Ravichandran</span>,
               a passionate software engineer who recently completed my Master's
@@ -32,10 +52,9 @@ function Home() {
               Whether it's through developing user-friendly applications,
               optimizing performance, or solving complex challenges, I strive to
               make a positive impact through my work.
-            </p>
-          </div>
-          <div className="content text-gray-600 hover:text-gray-800 flex items-center justify-center mt-6 lg:mt-0">
-            <p className="mr-2">Explore my skills</p>
+            </p> */}
+            <div className="text-gray-600 hover:text-gray-800 flex items-center justify-center mt-6">
+            <p className="mr-4">Explore my skills</p>
             <Link
               to="#skills"
               smooth={true}
@@ -45,6 +64,8 @@ function Home() {
               <FaArrowAltCircleDown className="text-4xl" />
             </Link>
           </div>
+          </div>
+          
         </section>
     </div>
   )
