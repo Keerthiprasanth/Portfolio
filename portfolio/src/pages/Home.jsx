@@ -21,16 +21,16 @@ function Home() {
             </div>
           <div className="text-lg lg:text-2xl text-gray-700 max-w-xl lg:max-w-2xl px-4 text-center mb-16">
             
-            <h1 className="text-xl  text-gray-800 mb-6">
-              Hello and welcome to my portfolio!
+            <h1 className="text-xl  text-gray-800 mb-1">
+              Hello and welcome to my portfolio! <br /> I am
             </h1>
-            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-1">Keerthi Prasanth Ravichandran</h1>
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-1 animate-pulse">Keerthi Prasanth Ravichandran</h1>
 
             <Typewriter className="text-xl  text-gray-800" options={{
               autoStart: true,
               loop: true,
               delay: 80,
-              strings: "Software Developer"
+              strings: ["Software Developer", "Software Engineer"]
             }
 
             }/>
