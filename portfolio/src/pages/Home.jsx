@@ -17,7 +17,7 @@ function Home() {
           id="home"
         >
           <div>
-            <img className="p-4" src="https://thumbs.dreamstime.com/b/web-design-icon-website-webpage-developer-editable-stroke-vector-icon-web-design-icon-website-webpage-developer-editable-stroke-289252930.jpg" alt="" className="w-full rounded-lg"></img>
+            <img src="https://thumbs.dreamstime.com/b/web-design-icon-website-webpage-developer-editable-stroke-vector-icon-web-design-icon-website-webpage-developer-editable-stroke-289252930.jpg" alt="home_page" className="p-4 w-full rounded-lg"></img>
             </div>
           <div className="text-lg lg:text-2xl text-gray-700 max-w-xl lg:max-w-2xl px-4 text-center mb-16">
             
