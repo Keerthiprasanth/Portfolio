@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       keyframes: {
         fadeInLeftToRight: {
-          '0%': { opacity: '0', transform: 'translateX(-100px)' },
+          '0%': { opacity: '0', transform: 'translateX(-200px)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         fadeInTopToBottom: {
@@ -14,7 +14,7 @@ module.exports = {
         }
       },
       animation: {
-        fadeInLeftToRight: 'fadeInLeftToRight 1s ease-in-out',
+        fadeInLeftToRight: 'fadeInLeftToRight 1s ease-in-out forwards',
         fadeInTopToBottom: 'fadeInTopToBottom 1s ease-in-out forwards',
       },
     },

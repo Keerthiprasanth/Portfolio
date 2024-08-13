@@ -30,7 +30,7 @@ function Home() {
               autoStart: true,
               loop: true,
               delay: 80,
-              strings: ["Software Developer", "Software Engineer"]
+              strings: ["Full-Stack Web Developer", "Android Developer"]
             }
 
             }/>
