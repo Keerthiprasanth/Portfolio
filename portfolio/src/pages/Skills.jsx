@@ -19,6 +19,7 @@ function Skills() {
     // { name: "Randoop", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1gp8wu824lUR7WVvEQdjogqNMrOtHI_tuJg&s" },
     { name: "Git", logo: "https://book.git-scm.com/images/logos/downloads/Git-Icon-1788C.png" },
     { name: "GitHub", logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png" },
+    // { name: "Post Man", logo: ""}
   ];
 
   return (
