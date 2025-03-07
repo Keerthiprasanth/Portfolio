@@ -12,7 +12,7 @@ function Navbar() {
   }
 
   return (
-    <header className="flex items-center justify-between h-20 p-0 px-8 bg-blue-950 text-stone-50">
+    <header className="flex items-center justify-between p-0 pl-8 px-2 py-4 bg-blue-950 text-stone-50 fixed w-screen md:w-screen top-0 left-0 z-50">
       <h1>KP</h1>
       <nav ref={navRef}>
         <a className="m-0 mx-6 hover:text-yellow-500" href="/#">Home</a>

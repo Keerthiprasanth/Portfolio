@@ -15,7 +15,7 @@ function Pagination({ projectsPerPage, totalProjects, paginate }) {
             <a
               onClick={() => paginate(number)}
               href="!#"
-              className="inline-block px-4 py-2 text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-colors duration-200"
+              className="inline-block px-4 py-2 text-white bg-blue-400 hover:bg-blue-600 transition-colors duration-200"
             >
               {number}
             </a>

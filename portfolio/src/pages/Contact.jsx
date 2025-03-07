@@ -1,10 +1,50 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!form.current) {
+      console.error("Form reference is null");
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (response) => {
+          alert("Message sent successfully!");
+          console.log("Success:", response);
+          form.current.reset();
+        },
+        (error) => {
+          alert("Something went wrong. Try again.");
+          console.log(formData);
+          console.error("Error:", error);
+        }
+      );
+  };
   return (
     <div>
       <section
-        className="p-8 h-full flex flex-col justify-center items-center bg-gray-200"
+        className="pt-16 p-8 h-full flex flex-col justify-center items-center bg-gray-200"
         id="contact"
       >
         <h1 className="text-3xl text-gray-800 mb-8 font-semibold">
@@ -17,28 +57,39 @@ function Contact() {
             <br />
             You can contact me via email, or connect with me on social media.
           </p>
-          <form className="grid gap-4 md:items-center md:text-center md:p-14 sm:max-xl:p-9 bg-gray-400 p-5 mt-8 rounded-lg shadow-lg">
+          <form
+            ref={form}
+            onSubmit={handleSubmit}
+            className="grid gap-4 md:items-center md:text-center md:p-14 sm:max-xl:p-9 bg-gray-400 p-5 mt-8 rounded-lg shadow-lg"
+          >
             <input
               className="rounded-lg opacity-0 pl-3 h-12 animate-fadeInLeftToRight"
               type="email"
+              name="email"
               placeholder="Email"
               required
+              onChange={handleChange}
               style={{ animationDelay: "0.2s" }}
             />
             <input
               className="rounded-lg opacity-0 pl-3 h-12 animate-fadeInLeftToRight"
               type="text"
               placeholder="Name"
+              name="name"
               required
+              onChange={handleChange}
               style={{ animationDelay: "0.4s" }}
             />
             <textarea
               className="rounded-lg opacity-0 p-3 h-40 md:h-60 animate-fadeInLeftToRight"
               placeholder="Message"
+              name="message"
               required
+              onChange={handleChange}
               style={{ animationDelay: "0.6s" }}
             ></textarea>
             <button
+              type="submit"
               className="rounded-lg opacity-0 h-12 w-20 bg-white text-green-500 hover:bg-green-200 border border-green-500 transition-all animate-fadeInLeftToRight"
               style={{ animationDelay: "0.8s" }}
             >
@@ -56,10 +107,8 @@ function Contact() {
           </div>
           <div className="mt-8">
             <h3 className="text-lg font-semibold mb-2">Social Media:</h3>
-            <div>
-              </div>
+            <div></div>
             <div className="flex items-center justify-center space-x-4">
-            
               <a
                 href="https://www.linkedin.com/in/keerthi-prasanth-ravichandran-b15b84252/"
                 target="_blank"
@@ -67,10 +116,10 @@ function Contact() {
                 className="text-blue-600 hover:text-blue-800 inline-block transition-all transform hover:scale-110"
               >
                 <img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                className="w-8"
-                alt="LinkedIn"
-              />
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                  className="w-8"
+                  alt="LinkedIn"
+                />
               </a>
               <a
                 href="https://github.com/keerthiprasanth"
@@ -79,10 +128,10 @@ function Contact() {
                 className="text-gray-800 hover:text-black inline-block transition-all transform hover:scale-110"
               >
                 <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                className="w-8"
-                alt="GitHub"
-              />
+                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  className="w-8"
+                  alt="GitHub"
+                />
               </a>
               <a
                 href="https://www.instagram.com/keerthi_prasanth_r/"
@@ -91,10 +140,10 @@ function Contact() {
                 className="text-blue-600 hover:text-blue-800 inline-block transition-all transform hover:scale-110"
               >
                 <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                className="w-8"
-                alt="Instagram"
-              />
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                  className="w-8"
+                  alt="Instagram"
+                />
               </a>
             </div>
           </div>

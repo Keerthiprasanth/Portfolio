@@ -43,7 +43,7 @@ function Timeline() {
     <div>
       <section
         id="timeline"
-        className="p-8 h-auto flex flex-col justify-center items-center bg-gray-200"
+        className="pt-16 p-8 h-auto flex flex-col justify-center items-center bg-gray-200"
       >
         {/* <MyTimeline /> */}
         <div className="max-w-3xl text-center mb-8">
