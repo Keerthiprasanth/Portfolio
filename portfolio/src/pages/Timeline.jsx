@@ -7,9 +7,18 @@ import "react-vertical-timeline-component/style.min.css";
 import TCS_logo from "../images/TCS_logo.png";
 import UOL_logo from "../images/UOL_logo.png";
 import SKASC_logo from "../images/SKASC_logo.avif";
+import Door_Valley_logo from "../images/DOOR_VALLEY-logo.png";
 
 function Timeline() {
   const items = [
+    {
+      id: 0,
+      title: "Digital Operations Associate",
+      location: "Door Valley, Leicester, UK",
+      date: "Jan 2025 - Present",
+      icon: Door_Valley_logo,
+      content: "//////// CONTENT REQUIRED ////////",
+    },
     {
       id: 1,
       title: "MSc. Advanced Software Engineering – Merit (2:1)",
@@ -17,7 +26,7 @@ function Timeline() {
       date: "Sept 2022 - Jan 2024",
       icon: UOL_logo,
       content:
-        "Modules: Mobile and Web Applications, Advanced Web Technologies, Software Measurement and Quality Assurance, Interactive Development and User Experience",
+        "Modules: Mobile and Web Applications, Advanced Web Technologies, Software Measurement and Quality Assurance, Interactive Development and User Experience.",
     },
     {
       id: 2,
@@ -26,7 +35,7 @@ function Timeline() {
       date: "Aug 2021 - Sept 2022",
       icon: TCS_logo,
       content:
-        "Gained proficiency in Java, JavaScript, HTML, CSS, and Python through immersive training. Developed a gaming map using Blender and Unity, focusing on 3D modeling and game development. Managed and maintained lease documents for US clients using IBM’s Tririga software, ensuring data accuracy and compliance. Enhanced application performance and functionality using Java.",
+        "Gained proficiency in Java, JavaScript, HTML, CSS, and Python through immersive training. Developed a gaming map using Blender and Unity, focusing on 3D modeling and game development. Managed and maintained lease documents for US clients using IBM’s Tririga software, ensuring data accuracy and compliance.",
     },
     {
       id: 3,
@@ -35,7 +44,7 @@ function Timeline() {
       date: "June 2018 - May 2021",
       icon: SKASC_logo,
       content:
-        "Modules: Software Engineering, Mobile Application Development, Data Structures and Algorithms, Java, Python, Operating System, Digital Fundamentals and Architecture, Data Communication and Networks",
+        "Modules: Software Engineering, Mobile Application Development, Data Structures and Algorithms, Java, Python, Operating Systems, Digital Fundamentals and Architecture, Data Communication and Networks.",
     },
   ];
 
@@ -43,43 +52,48 @@ function Timeline() {
     <div>
       <section
         id="timeline"
-        className="pt-16 p-8 h-auto flex flex-col justify-center items-center bg-gray-200"
+        className="pt-16 p-4 min-h-screen flex flex-col items-center bg-customBackground font-volkhov text-customTextColor"
       >
-        {/* <MyTimeline /> */}
-        <div className="max-w-3xl text-center mb-8">
-          <h1 className="text-3xl text-gray-800 mb-8 font-semibold">
-            Timeline
-          </h1>
-          <VerticalTimeline>
-            {items.map((element) => {
-              return (
-                <VerticalTimelineElement
-                  key={element.key}
-                  date={element.date}
-                  dateClassName="date"
-                  iconStyle={{ background: "#ffffff" }}
-                  icon={
-                    <img
-                      src={element.icon}
-                      alt="icon"
-                      className="w-full h-full p-1 rounded-xl"
-                    />
-                  }
-                >
-                  <h3 className="vertical-timeline-element-title font-bold">
-                    {element.title}
-                  </h3>
-                  <h5 className="vertical-timeline-element-subtitle font-bold">
-                    {element.location}
-                  </h5>
-                  <p className="transition-opacity duration-300 opacity-80 group-hover:opacity-100">
-                    {element.content}
-                  </p>
-                </VerticalTimelineElement>
-              );
-            })}
-          </VerticalTimeline>
+        <div className="text-center mb-4">
+          <h1 className="text-3xl font-semibold">Timeline</h1>
         </div>
+
+        <VerticalTimeline>
+          {items.map((element) => (
+            <VerticalTimelineElement
+              key={element.id}
+              date={element.date}
+              dateClassName="text-customBackground font-semibold bg-transparent md:text-white"
+              contentStyle={{ padding: "8px 12px", fontSize: "14px" }}
+              contentArrowStyle={{ borderRight: "10px solid #ffffff" }}
+              iconStyle={{
+                background: "#ffffff",
+                boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)",
+                padding: "1px"
+              }}
+              icon={
+                <img
+                  src={element.icon}
+                  alt={element.title}
+                  className="w-full h-full p-2 rounded-full"
+                />
+              }
+            >
+              <h3 className="text-base md:text-lg font-bold text-customBackground">
+                {element.title}
+              </h3>
+              <h5 className="text-sm md:text-base font-medium text-gray-700">
+                {element.location}
+              </h5>
+              <p
+                className="text-xs md:text-sm lg:text-base mt-1 text-customBackground"
+                style={{ fontSize: "13px" }}
+              >
+                {element.content}
+              </p>
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
       </section>
     </div>
   );

@@ -20,7 +20,7 @@ function App() {
           <Skills />
           <Project />
           <Timeline />
-          <Hobbies />
+          {/* <Hobbies /> */}
           <Contact />
           <Footer/>
         </BrowserRouter>

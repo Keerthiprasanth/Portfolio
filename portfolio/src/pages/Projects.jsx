@@ -56,10 +56,10 @@ function Projects() {
   return (
     <div>
       <section
-        className="p-8 h-auto flex flex-col justify-center items-center bg-gray-100"
+        className="pt-16 p-8 h-auto min-h-screen flex flex-col items-center bg-customBackground text-customTextColor font-volkhov text-base md:text-lg"
         id="projects"
       >
-        <h1 className="text-3xl mt-11 text-gray-800 mb-8 font-semibold">
+        <h1 className="text-3xl mb-8">
           Projects
         </h1>
         <ProjectsPage
@@ -69,35 +69,8 @@ function Projects() {
           projectsPerPage={projectsPerPage}
           totalProjects={projects.length}
           paginate={paginate}
+          currentPage={currentPage}
         />
-        {/* <div className="max-w-6xl mx-auto flex flex-col gap-8">
-            {projects.map((project, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-lg">
-                <div className="flex flex-col lg:flex-row items-center">
-                  <div className="mb-4 lg:mr-4 lg:mb-0">
-                    <video className="w-full h-auto" controls>
-                      <source src={project.videoUrl} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold">{project.title}</h3>
-                    <div className="flex flex-wrap mt-4 mb-4">
-                      {project.tools.split(", ").map((tool, index) => (
-                        <span
-                          key={index}
-                          className="bg-gray-200 text-gray-700 py-1 px-2 mr-2 mb-2 rounded"
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
-                    <p className="mt-2">{project.shortDescription}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div> */}
       </section>
     </div>
   );
