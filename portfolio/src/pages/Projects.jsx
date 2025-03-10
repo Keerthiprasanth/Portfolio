@@ -1,11 +1,17 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProjectsPage from "../components/ProjectsPage";
 import Pagination from "../components/Pagination";
 
-function Projects() {
+function Projects({ isLightMode }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [projectsPerPage] = useState(2);
+
+  const [theme, setTheme] = useState(isLightMode);
+
+  useEffect(() => {
+    setTheme(isLightMode);
+  }, [isLightMode]);
 
   const projects = [
     {
@@ -56,7 +62,11 @@ function Projects() {
   return (
     <div>
       <section
-        className="pt-16 p-8 h-auto min-h-screen flex flex-col items-center bg-customBackground text-customTextColor font-volkhov text-base md:text-lg"
+        className={`pt-16 p-8 h-auto min-h-screen flex flex-col items-center transition-all duration-500 ${
+          theme
+            ? "bg-customTextColor text-customBackground"
+            : "bg-customBackground text-customTextColor"
+        } font-volkhov text-base md:text-lg`}
         id="projects"
       >
         <h1 className="text-3xl mb-8">

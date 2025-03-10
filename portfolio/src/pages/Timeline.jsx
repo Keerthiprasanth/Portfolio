@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -9,7 +9,13 @@ import UOL_logo from "../images/UOL_logo.png";
 import SKASC_logo from "../images/SKASC_logo.avif";
 import Door_Valley_logo from "../images/DOOR_VALLEY-logo.png";
 
-function Timeline() {
+function Timeline({ isLightMode }) {
+  const [theme, setTheme] = useState(isLightMode);
+
+  useEffect(() => {
+    setTheme(isLightMode);
+  }, [isLightMode]);
+
   const items = [
     {
       id: 0,
@@ -52,7 +58,11 @@ function Timeline() {
     <div>
       <section
         id="timeline"
-        className="pt-16 p-4 min-h-screen flex flex-col items-center bg-customBackground font-volkhov text-customTextColor"
+        className={`pt-16 p-4 min-h-screen flex flex-col items-center transition-all duration-500 ${
+          theme
+            ? "bg-customTextColor text-customBackground"
+            : "bg-customBackground text-customTextColor"
+        } font-volkhov`}
       >
         <div className="text-center mb-4">
           <h1 className="text-3xl font-semibold">Timeline</h1>

@@ -1,10 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
-function Contact() {
+function Contact({ isLightMode }) {
   const form = useRef(null);
   const contactRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+
+  const [theme, setTheme] = useState(isLightMode);
+
+  useEffect(() => {
+    setTheme(isLightMode);
+  }, [isLightMode]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -65,8 +71,12 @@ function Contact() {
   return (
     <div ref={contactRef}>
       <section
-        className="pt-16 p-8 h-full md:min-h-screen flex flex-col items-center bg-customBackground text-customTextColor font-volkhov"
-        id="contact"
+        className={`pt-16 p-8 h-full md:min-h-screen flex flex-col items-center transition-all duration-500 ${
+          theme
+            ? "bg-customTextColor text-customBackground"
+            : "bg-customBackground text-customTextColor"
+        } font-volkhov"
+        id="contact`}
       >
         <h1 className="text-3xl mb-8 font-semibold">Contact Me</h1>
         <div className="text-sm md:text-lg text-justify">

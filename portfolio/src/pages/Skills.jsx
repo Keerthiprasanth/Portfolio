@@ -2,23 +2,65 @@ import React, { useEffect, useRef, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 
-function Skills() {
+function Skills({ isLightMode }) {
   const skillsRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
+  const [theme, setTheme] = useState(isLightMode);
+
+  useEffect(() => {
+    setTheme(isLightMode);
+  }, [isLightMode]);
+
   const skillsList = [
-    { name: "HTML & CSS", logo: "https://www.pngitem.com/pimgs/m/198-1985043_html-css-logo-transparent-hd-png-download.png" },
-    { name: "Java", logo: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png" },
-    { name: "Android Studio", logo: "https://seeklogo.com/images/A/android-studio-logo-1EE788C6EC-seeklogo.com.png" },
-    { name: "JavaScript", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
-    { name: "React.js", logo: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" },
-    { name: "Node.js", logo: "https://i0.wp.com/compositecode.blog/wp-content/uploads/2018/07/1200px-node-js_logo.png?resize=863%2C528&ssl=1" },
-    { name: "Express.js", logo: "https://miro.medium.com/v2/resize:fit:1400/1*q6b32yNdlpyQjDZlAc1QEg.png" },
-    { name: "MongoDB", logo: "https://www.pngall.com/wp-content/uploads/13/Mongodb-PNG-Image-HD.png" },
-    { name: "Tailwind CSS", logo: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/31/tailwind.png" },
-    { name: "Bootstrap", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" },
-    { name: "Git", logo: "https://book.git-scm.com/images/logos/downloads/Git-Icon-1788C.png" },
-    { name: "GitHub", logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png" },
+    {
+      name: "HTML & CSS",
+      logo: "https://www.pngitem.com/pimgs/m/198-1985043_html-css-logo-transparent-hd-png-download.png",
+    },
+    {
+      name: "Java",
+      logo: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png",
+    },
+    {
+      name: "Android Studio",
+      logo: "https://seeklogo.com/images/A/android-studio-logo-1EE788C6EC-seeklogo.com.png",
+    },
+    {
+      name: "JavaScript",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    },
+    {
+      name: "React.js",
+      logo: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
+    },
+    {
+      name: "Node.js",
+      logo: "https://i0.wp.com/compositecode.blog/wp-content/uploads/2018/07/1200px-node-js_logo.png?resize=863%2C528&ssl=1",
+    },
+    {
+      name: "Express.js",
+      logo: "https://miro.medium.com/v2/resize:fit:1400/1*q6b32yNdlpyQjDZlAc1QEg.png",
+    },
+    {
+      name: "MongoDB",
+      logo: "https://www.pngall.com/wp-content/uploads/13/Mongodb-PNG-Image-HD.png",
+    },
+    {
+      name: "Tailwind CSS",
+      logo: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/31/tailwind.png",
+    },
+    {
+      name: "Bootstrap",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+    },
+    {
+      name: "Git",
+      logo: "https://book.git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+    },
+    {
+      name: "GitHub",
+      logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    },
   ];
 
   useEffect(() => {
@@ -26,10 +68,10 @@ function Skills() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Stop observing once visible
+          observer.disconnect();
         }
       },
-      { threshold: 0.3 } // Triggers when 20% of the section is visible
+      { threshold: 0.3 }
     );
 
     if (skillsRef.current) {
@@ -43,7 +85,11 @@ function Skills() {
     <div>
       <section
         ref={skillsRef}
-        className="pt-16 p-8 h-auto min-h-screen flex flex-col items-center bg-customBackground text-customTextColor font-volkhov text-base md:text-lg"
+        className={`pt-16 p-8 h-auto min-h-screen flex flex-col items-center transition-all duration-500 ${
+          theme
+            ? "bg-customTextColor text-customBackground"
+            : "bg-customBackground text-customTextColor"
+        } font-volkhov text-base md:text-lg`}
         id="skills"
       >
         <h1 className="text-3xl mb-8 font-semibold">Skills</h1>
