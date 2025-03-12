@@ -73,13 +73,25 @@ function Timeline({ isLightMode }) {
             <VerticalTimelineElement
               key={element.id}
               date={element.date}
-              dateClassName="text-customBackground font-semibold bg-transparent md:text-white"
-              contentStyle={{ padding: "8px 12px", fontSize: "14px" }}
-              contentArrowStyle={{ borderRight: "10px solid #ffffff" }}
+              dateClassName={`font-bold ${
+                isLightMode ? "text-customBackground" : "text-customTextColor"
+              }
+              `}
+              contentStyle={{
+                background: isLightMode ? "#000000" : "#ffffff",
+                maxWidth: "600px",
+                padding: "8px 12px",
+                fontSize: "14px",
+              }}
+              contentArrowStyle={{
+                borderRight: isLightMode
+                  ? "12px solid #000000"
+                  : "12px solid #ffffff",
+              }}
               iconStyle={{
                 background: "#ffffff",
                 boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)",
-                padding: "1px"
+                padding: "1px",
               }}
               icon={
                 <img
@@ -89,14 +101,24 @@ function Timeline({ isLightMode }) {
                 />
               }
             >
-              <h3 className="text-base md:text-lg font-bold text-customBackground">
+              <h3
+                className={`text-base md:text-lg font-bold ${
+                  theme ? "text-customTextColor" : "text-customBackground"
+                }`}
+              >
                 {element.title}
               </h3>
-              <h5 className="text-sm md:text-base font-medium text-gray-700">
+              <h5
+                className={`text-sm md:text-base font-medium ${
+                  theme ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
                 {element.location}
               </h5>
               <p
-                className="text-xs md:text-sm lg:text-base mt-1 text-customBackground"
+                className={`text-xs md:text-sm lg:text-base mt-1 ${
+                  theme ? "text-customTextColor" : "text-customBackground"
+                }`}
                 style={{ fontSize: "13px" }}
               >
                 {element.content}

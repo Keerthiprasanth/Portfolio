@@ -1,8 +1,8 @@
 import React from "react";
 
-function Pagination({ projectsPerPage, totalProjects, paginate, currentPage }) {
+function Pagination({ projectsPerPage, totalProjects, paginate, currentPage, isLightMode }) {
   const pageNumbers = [];
-  console.log("Current page - ",currentPage);
+
   for (let i = 1; i <= Math.ceil(totalProjects / projectsPerPage); i++) {
     pageNumbers.push(i);
   }
@@ -14,10 +14,14 @@ function Pagination({ projectsPerPage, totalProjects, paginate, currentPage }) {
           <li key={number} className="">
             <button
               onClick={() => paginate(number)}
-              className={`inline-block px-4 py-2 rounded-md transition-colors duration-200 ${
+              className={`inline-block px-4 py-2 rounded-md transition-all duration-500 ${
+                isLightMode
+                  ? "bg-customBackground text-customTextColor"
+                  : "bg-customTextColor text-customBackground"
+              } ${
                 number === currentPage
-                  ? "bg-gray-600 text-customTextColor" 
-                  : "bg-customTextColor text-customBackground hover:bg-gray-300"
+                  ? "bg-gray-500 text-customTextColor" 
+                  : "hover:bg-gray-500 hover:text-customTextColor"
               }`}
             >
               {number}

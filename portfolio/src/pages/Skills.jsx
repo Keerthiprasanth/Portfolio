@@ -107,7 +107,7 @@ function Skills({ isLightMode }) {
           {skillsList.map((skill, index) => (
             <li
               key={index}
-              className={`py-3 px-4 flex flex-col items-center justify-center transition transform hover:-translate-y-1 hover:shadow-lg text-customTextColor opacity-0 ${
+              className={`py-3 px-4 flex flex-col items-center justify-center transition transform hover:-translate-y-1 hover:shadow-lg opacity-0 ${
                 isVisible ? "animate-fadeInTopToBottom" : ""
               }`}
               style={{
@@ -125,7 +125,7 @@ function Skills({ isLightMode }) {
           ))}
         </ul>
 
-        <div className="flex items-center justify-center mt-8 hover:text-gray-400">
+        <div className="flex items-center justify-center mt-8 hover:text-gray-500">
           <p className="mr-4">Checkout my projects below</p>
           <Link
             to="#projects"

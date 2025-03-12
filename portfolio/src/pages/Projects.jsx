@@ -74,12 +74,14 @@ function Projects({ isLightMode }) {
         </h1>
         <ProjectsPage
           projects={currentProjects}
+          isLightMode={isLightMode}
         ></ProjectsPage>
         <Pagination
           projectsPerPage={projectsPerPage}
           totalProjects={projects.length}
           paginate={paginate}
           currentPage={currentPage}
+          isLightMode={isLightMode}
         />
       </section>
     </div>

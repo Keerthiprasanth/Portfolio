@@ -90,12 +90,20 @@ function Contact({ isLightMode }) {
           <form
             ref={form}
             onSubmit={handleSubmit}
-            className={`grid gap-2 md:gap-4 md:items-center md:text-center p-6 md:p-8 sm:max-xl:p-9 border-2 border-customTextColor bg-customBackground mt-4 rounded-lg shadow-lg transition-opacity opacity-0 transform ${
+            className={`grid gap-2 md:gap-4 md:items-center md:text-center p-6 md:p-8 sm:max-xl:p-9 ${
+              theme
+                ? "bg-customTextColor text-customBackground border-customBackground border-2"
+                : "bg-customBackground text-customTextColor border-customTextColor border-2"
+            } mt-4 rounded-lg shadow-lg transition-opacity opacity-0 transform ${
               isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
             }`}
           >
             <input
-              className={`rounded-lg pl-3 h-10 md:h-12 text-customBackground transition-opacity opacity-0 transform ${
+              className={`rounded-lg pl-3 h-10 md:h-12 transition-opacity opacity-0 transform ${
+                theme
+                  ? "bg-gray-500 text-customTextColor"
+                  : "bg-customTextColor text-customBackground"
+              } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
               type="email"
@@ -107,6 +115,10 @@ function Contact({ isLightMode }) {
             />
             <input
               className={`rounded-lg pl-3 h-10 md:h-12 text-customBackground transition-opacity opacity-0 transform ${
+                theme
+                  ? "bg-gray-500 text-customTextColor"
+                  : "bg-customTextColor text-customBackground"
+              } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
               type="text"
@@ -118,6 +130,10 @@ function Contact({ isLightMode }) {
             />
             <textarea
               className={`rounded-lg p-3 h-32 md:h-40 text-customBackground transition-opacity opacity-0 transform ${
+                theme
+                  ? "bg-gray-500 text-customTextColor"
+                  : "bg-customTextColor text-customBackground"
+              } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
               placeholder="Enter Your Message"
@@ -128,7 +144,11 @@ function Contact({ isLightMode }) {
             ></textarea>
             <button
               type="submit"
-              className={`rounded-lg h-12 w-20 border-2 bg-customBackground text-customTextColor hover:bg-customTextColor hover:text-customBackground transition-opacity opacity-0 transform ${
+              className={`rounded-lg h-12 w-20 border-2 hover:bg-customTextColor hover:text-customBackground transition-opacity opacity-0 transform ${
+                theme
+                  ? "bg-customTextColor text-customBackground border-customBackground"
+                  : "bg-customBackground text-customTextColor border-customTextColor "
+              } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
               style={{ animationDelay: "0.8s" }}
