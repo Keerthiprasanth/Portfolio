@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaMoon } from "react-icons/fa";
+import { MdOutlineWbSunny } from "react-icons/md";
 import { Link } from "react-router-dom";
 // import "./Navbar.css"
 import "../App.css";
@@ -21,22 +22,22 @@ function Navbar({ isLightMode, toggleTheme }) {
     >
       <h1>KP</h1>
       <nav ref={navRef}>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#">
+        <a className="m-0 mx-6 hover:text-gray-400" href="/#">
           Home
         </a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#skills">
+        <a className="m-0 mx-6 hover:text-gray-400" href="/#skills">
           Skills
         </a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#projects">
+        <a className="m-0 mx-6 hover:text-gray-400" href="/#projects">
           Projects
         </a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#timeline">
+        <a className="m-0 mx-6 hover:text-gray-400" href="/#timeline">
           Timeline
         </a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#hobbies">
+        <a className="m-0 mx-6 hover:text-gray-400" href="/#hobbies">
           Hobbies
         </a>
-        <a className="m-0 mx-6 hover:text-yellow-500" href="/#contact">
+        <a className="m-0 mx-6 hover:text-gray-400" href="/#contact">
           Contact
         </a>
         <button
@@ -47,15 +48,24 @@ function Navbar({ isLightMode, toggleTheme }) {
         </button>
       </nav>
       <div className="flex items-center gap-4">
+
         <button
           onClick={toggleTheme}
-          className={`p-2 rounded-lg font-semibold transition-all ${
-            isLightMode
-              ? "bg-customBackground text-customTextColor hover:bg-gray-300"
-              : "bg-customTextColor text-customBackground hover:bg-gray-700"
-          }`}
+          className="relative inline-flex items-center h-8 w-14 rounded-full border-2 bg-gray-200 focus:outline-none focus:ring-2 border-indigo-500 transition-colors duration-300"
         >
-          {isLightMode ? "🌙 Dark Mode" : "☀️ Light Mode"}
+          <span
+            className={`absolute flex items-center justify-center w-6 h-6 transform rounded-full transition-transform duration-300 ${
+              isLightMode
+                ? "translate-x-6 bg-customBackground"
+                : "translate-x-1 bg-customTextColor"
+            }`}
+          >
+            {isLightMode ? (
+              <FaMoon className="text-customTextColor text-8" />
+            ) : (
+              <MdOutlineWbSunny className="text-customBackground" />
+            )}
+          </span>
         </button>
 
         <button className="md:hidden text-xl p-2" onClick={showNavbar}>

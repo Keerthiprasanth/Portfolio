@@ -108,7 +108,7 @@ function Contact({ isLightMode }) {
               }`}
               type="email"
               name="email"
-              placeholder="Enter Your Email"
+              placeholder="Enter Your Email ID"
               required
               onChange={handleChange}
               style={{ animationDelay: "0.2s" }}

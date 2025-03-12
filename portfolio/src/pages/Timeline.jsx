@@ -68,7 +68,7 @@ function Timeline({ isLightMode }) {
           <h1 className="text-3xl font-semibold">Timeline</h1>
         </div>
 
-        <VerticalTimeline>
+        <VerticalTimeline lineColor={isLightMode ? "#000000" : "#ffffff"}>
           {items.map((element) => (
             <VerticalTimelineElement
               key={element.id}
