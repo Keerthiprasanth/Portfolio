@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.95424418.css",
+    "main.js": "/Portfolio/static/js/main.00b80eba.js",
+    "static/media/Cropped_profile.jpeg": "/Portfolio/static/media/Cropped_profile.753646fad093cca95abe.jpeg",
+    "static/media/UOL_logo.png": "/Portfolio/static/media/UOL_logo.18948edd1757ca5bfadc.png",
+    "static/media/TCS_logo.png": "/Portfolio/static/media/TCS_logo.e3bf551cf128afb08d62.png",
+    "static/media/SKASC_logo.avif": "/Portfolio/static/media/SKASC_logo.0c0ea1ad81c6bf256b5d.avif",
+    "index.html": "/Portfolio/index.html",
+    "main.95424418.css.map": "/Portfolio/static/css/main.95424418.css.map",
+    "main.00b80eba.js.map": "/Portfolio/static/js/main.00b80eba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95424418.css",
+    "static/js/main.00b80eba.js"
+  ]
+}
