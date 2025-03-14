@@ -25,9 +25,9 @@ function App() {
 
   return (
     <div className={isLightMode ? "light-mode" : "dark-mode"}>
+      <BrowserRouter>
       <Navbar isLightMode={isLightMode} toggleTheme={toggleTheme}/>
       <div className="pt-14">
-        <BrowserRouter>
           <Home isLightMode={isLightMode} />
           <Skills isLightMode={isLightMode} />
           <Project isLightMode={isLightMode} />
@@ -35,8 +35,9 @@ function App() {
           {/* <Hobbies isLightMode={isLightMode} /> */}
           <Contact isLightMode={isLightMode} />
           <Footer isLightMode={isLightMode} />
-        </BrowserRouter>
       </div>
+      </BrowserRouter>
+
     </div>
   );
 }

@@ -1,5 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import Gmail_logo from "../images/Gmail_logo.webp";
+import Instagram_logo from "../images/Instagram_logo.webp";
+import GitHub_logo from "../images/GitHub_logo.png";
+import LinkedIn_logo from "../images/LinkedIn_logo.png"
 
 function Contact({ isLightMode }) {
   const form = useRef(null);
@@ -71,12 +75,13 @@ function Contact({ isLightMode }) {
   return (
     <div ref={contactRef}>
       <section
-        className={`pt-16 p-8 h-full md:min-h-screen flex flex-col items-center transition-all duration-500 ${
+        className={`pt-16 p-4 h-full md:min-h-screen flex flex-col items-center transition-all duration-500 ${
           theme
             ? "bg-customTextColor text-customBackground"
             : "bg-customBackground text-customTextColor"
-        } font-volkhov"
-        id="contact`}
+        } font-volkhov text-sm md:text-lg"
+        `}
+        id="contact"
       >
         <h1 className="text-3xl mb-8 font-semibold">Contact Me</h1>
         <div className="text-sm md:text-lg text-justify">
@@ -90,7 +95,7 @@ function Contact({ isLightMode }) {
           <form
             ref={form}
             onSubmit={handleSubmit}
-            className={`grid gap-2 md:gap-4 md:items-center md:text-center p-6 md:p-8 sm:max-xl:p-9 ${
+            className={`grid gap-2 md:gap-4 md:items-center md:text-center p-4 md:p-8 sm:max-xl:p-9 ${
               theme
                 ? "bg-customTextColor text-customBackground border-customBackground border-2"
                 : "bg-customBackground text-customTextColor border-customTextColor border-2"
@@ -156,7 +161,7 @@ function Contact({ isLightMode }) {
               Send
             </button>
           </form>
-          <div className="mt-8">
+          <div className="mt-14">
             <h3 className="text-lg text-center mb-4">Social</h3>
             <div className="flex items-center justify-center space-x-4">
               <a
@@ -166,7 +171,7 @@ function Contact({ isLightMode }) {
                 className="inline-block transition-all transform hover:scale-110"
               >
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                  src={LinkedIn_logo}
                   className="w-8"
                   alt="LinkedIn"
                 />
@@ -178,8 +183,8 @@ function Contact({ isLightMode }) {
                 className="inline-block transition-all transform hover:scale-110"
               >
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                  className="w-8 bg-customTextColor rounded-lg p-1"
+                  src={GitHub_logo}
+                  className="w-8 bg-customTextColor rounded-lg"
                   alt="GitHub"
                 />
               </a>
@@ -190,7 +195,7 @@ function Contact({ isLightMode }) {
                 className="inline-block transition-all transform hover:scale-110"
               >
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                  src={Instagram_logo}
                   className="w-8"
                   alt="Instagram"
                 />
@@ -202,7 +207,7 @@ function Contact({ isLightMode }) {
                 className="inline-block transition-all transform hover:scale-110"
               >
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1280px-Gmail_icon_%282020%29.svg.png"
+                  src={Gmail_logo}
                   className="w-8"
                   alt="Gmail"
                 />

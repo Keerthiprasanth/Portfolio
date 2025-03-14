@@ -60,12 +60,14 @@ function Timeline({ isLightMode }) {
         id="timeline"
         className={`pt-16 p-4 min-h-screen flex flex-col items-center transition-all duration-500 ${
           theme
-            ? "bg-customTextColor text-customBackground"
-            : "bg-customBackground text-customTextColor"
+            ? "bg-customTextColor text-customTextColor"
+            : "bg-customBackground text-customBackground"
         } font-volkhov`}
       >
         <div className="text-center mb-4">
-          <h1 className="text-3xl font-semibold">Timeline</h1>
+          <h1 className={`text-3xl font-semibold ${
+                  theme ? "text-customBackground" : "text-customTextColor"
+                }`}>Timeline</h1>
         </div>
 
         <VerticalTimeline lineColor={isLightMode ? "#000000" : "#ffffff"}>
@@ -73,9 +75,13 @@ function Timeline({ isLightMode }) {
             <VerticalTimelineElement
               key={element.id}
               date={element.date}
-              dateClassName={`font-bold ${
-                isLightMode ? "text-customBackground" : "text-customTextColor"
-              }
+              dateStyle={{
+                background: "#ffffff"
+              }}
+              dateClassName={`font-bold text-red 
+              // {
+              //   isLightMode ? "text-customBackground" : "text-customTextColor"
+              // }
               `}
               contentStyle={{
                 background: isLightMode ? "#000000" : "#ffffff",

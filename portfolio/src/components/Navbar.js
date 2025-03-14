@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FaBars, FaTimes, FaMoon } from "react-icons/fa";
 import { MdOutlineWbSunny } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 // import "./Navbar.css"
 import "../App.css";
 
@@ -22,24 +22,46 @@ function Navbar({ isLightMode, toggleTheme }) {
     >
       <h1>KP</h1>
       <nav ref={navRef}>
-        <a className="m-0 mx-6 hover:text-gray-400" href="/#">
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+        >
           Home
-        </a>
-        <a className="m-0 mx-6 hover:text-gray-400" href="/#skills">
+        </Link>
+        <Link
+          to="skills"
+          smooth={true}
+          duration={500}
+          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+        >
           Skills
-        </a>
-        <a className="m-0 mx-6 hover:text-gray-400" href="/#projects">
+        </Link>
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+        >
           Projects
-        </a>
-        <a className="m-0 mx-6 hover:text-gray-400" href="/#timeline">
+        </Link>
+        <Link
+          to="timeline"
+          smooth={true}
+          duration={500}
+          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+        >
           Timeline
-        </a>
-        <a className="m-0 mx-6 hover:text-gray-400" href="/#hobbies">
-          Hobbies
-        </a>
-        <a className="m-0 mx-6 hover:text-gray-400" href="/#contact">
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={500}
+          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+        >
           Contact
-        </a>
+        </Link>
         <button
           className="nav-btn nav-close-btn p-1 cursor-pointer bg-transparent border-none outline-none decoration-red-700 invisible opacity-0 text-base"
           onClick={showNavbar}
@@ -48,7 +70,6 @@ function Navbar({ isLightMode, toggleTheme }) {
         </button>
       </nav>
       <div className="flex items-center gap-4">
-
         <button
           onClick={toggleTheme}
           className="relative inline-flex items-center h-8 w-14 rounded-full border-2 bg-gray-200 focus:outline-none focus:ring-2 border-indigo-500 transition-colors duration-300"

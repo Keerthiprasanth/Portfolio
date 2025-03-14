@@ -14,7 +14,7 @@ function Home({ isLightMode }) {
   return (
     <div>
       <section
-        className={`relative flex flex-col items-center text-center min-h-screen md:p-14 p-8 sm:max-xl:p-9 transition-all duration-500 ${
+        className={`relative flex flex-col items-center text-center min-h-screen md:p-14 p-2 sm:max-xl:p-2 transition-all duration-500 ${
           theme
             ? "bg-customTextColor text-customBackground"
             : "bg-customBackground text-customTextColor"
@@ -25,17 +25,23 @@ function Home({ isLightMode }) {
           <img
             src={profileImage}
             alt="Profile Image"
-            className="w-64 h-64 p-1 rounded-full object-cover shadow-lg"
+            className={`w-56 h-56 md:w-64 md:h-64 mt-12 md:mt-4 rounded-full object-cover border ${
+              theme
+                ? "shadow-md shadow-customBackground border-customBackground"
+                : "shadow-md shadow-customTextColor border-customTextColor"
+            }`}
           />
         </div>
 
-        <div className="text-lg lg:text-2xl sm:max-w-xl lg:max-w-4xl px-4 text-center mt-6">
-          <h1 className="text-2xl">Hello and welcome to my portfolio!</h1>
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mt-4">
-            I'm Keerthi Prasanth Ravichandran, based in the UK
+        <div className="text-lg lg:text-2xl sm:max-w-xl lg:max-w-4xl px-4 text-center mt-16 md:mt-8">
+          <h1 className="text-lg md:text-2xl">
+            Hello and welcome to my portfolio!
+          </h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-2 md:mt-8">
+            I'm <span>Keerthi Prasanth Ravichandran</span>, based in the UK
           </h1>
 
-          <div className="text-xl mt-4">
+          <div className="text-xl mt-6">
             <Typewriter
               options={{
                 autoStart: true,
@@ -46,15 +52,16 @@ function Home({ isLightMode }) {
             />
           </div>
 
-          <div className="flex items-center justify-center mt-8 hover:text-gray-400">
-            <p className="mr-4">Explore my skills</p>
+          <div className="flex justify-center mt-20 md:mt-14 hover:text-gray-400">
+            {/* <p className="mr-4">Explore my skills</p> */}
             <Link
               to="#skills"
               smooth={true}
               duration={500}
-              className="transition-all transform hover:scale-110 animate-bounce"
-            >
-              <FaArrowAltCircleDown className="text-4xl" />
+              className="cursor-pointer flex flex-col items-center transition-all transform hover:scale-110"
+              >
+              <p className="mb-4 text-lg">Explore my skills</p>
+              <FaArrowAltCircleDown className="text-4xl animate-bounce" />
             </Link>
           </div>
         </div>
