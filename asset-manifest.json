@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.d88329bb.css",
-    "main.js": "/Portfolio/static/js/main.2eba9d1e.js",
+    "main.css": "/Portfolio/static/css/main.8f25e89e.css",
+    "main.js": "/Portfolio/static/js/main.e49a417e.js",
     "static/media/Instagram_logo.webp": "/Portfolio/static/media/Instagram_logo.ef207ba5fdd9f13cf80c.webp",
     "static/media/Cropped_profile.jpeg": "/Portfolio/static/media/Cropped_profile.753646fad093cca95abe.jpeg",
     "static/media/Git_logo.png": "/Portfolio/static/media/Git_logo.8dd3688bb1415872d423.png",
@@ -11,6 +11,7 @@
     "static/media/Android_studio_logo.svg": "/Portfolio/static/media/Android_studio_logo.5db391aa50ce91670924a7daeb4eaec2.svg",
     "static/media/TCS_logo.png": "/Portfolio/static/media/TCS_logo.e3bf551cf128afb08d62.png",
     "static/media/NodeJS_logo.webp": "/Portfolio/static/media/NodeJS_logo.c618b9e15f11524da6ae.webp",
+    "static/media/LeetCode_logo.png": "/Portfolio/static/media/LeetCode_logo.6459a47f939737dbb07b.png",
     "static/media/SKASC_logo.avif": "/Portfolio/static/media/SKASC_logo.0c0ea1ad81c6bf256b5d.avif",
     "static/media/LinkedIn_logo.png": "/Portfolio/static/media/LinkedIn_logo.68ac41e1459436bfd38f.png",
     "static/media/JavaScript_logo.png": "/Portfolio/static/media/JavaScript_logo.266bd9fb2663dcc057b4.png",
@@ -19,11 +20,11 @@
     "static/media/Bootstrap_logo.svg": "/Portfolio/static/media/Bootstrap_logo.3a162f65200426203695ee878e6b62fb.svg",
     "index.html": "/Portfolio/index.html",
     "static/media/TailwindCSS_logo.svg": "/Portfolio/static/media/TailwindCSS_logo.79614a5f61617ba49a0891494521226b.svg",
-    "main.d88329bb.css.map": "/Portfolio/static/css/main.d88329bb.css.map",
-    "main.2eba9d1e.js.map": "/Portfolio/static/js/main.2eba9d1e.js.map"
+    "main.8f25e89e.css.map": "/Portfolio/static/css/main.8f25e89e.css.map",
+    "main.e49a417e.js.map": "/Portfolio/static/js/main.e49a417e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d88329bb.css",
-    "static/js/main.2eba9d1e.js"
+    "static/css/main.8f25e89e.css",
+    "static/js/main.e49a417e.js"
   ]
 }
