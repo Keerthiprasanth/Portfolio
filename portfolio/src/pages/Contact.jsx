@@ -3,7 +3,8 @@ import emailjs from "@emailjs/browser";
 import Gmail_logo from "../images/Gmail_logo.webp";
 import Instagram_logo from "../images/Instagram_logo.webp";
 import GitHub_logo from "../images/GitHub_logo.png";
-import LinkedIn_logo from "../images/LinkedIn_logo.png"
+import LinkedIn_logo from "../images/LinkedIn_logo.png";
+import LeetCode_logo from "../images/LeetCode_logo.png";
 
 function Contact({ isLightMode }) {
   const form = useRef(null);
@@ -79,7 +80,7 @@ function Contact({ isLightMode }) {
           theme
             ? "bg-customTextColor text-customBackground"
             : "bg-customBackground text-customTextColor"
-        } font-volkhov text-sm md:text-lg"
+        } font-volkhov text-sm md:text-lg text-justify"
         `}
         id="contact"
       >
@@ -168,7 +169,7 @@ function Contact({ isLightMode }) {
                 href="https://www.linkedin.com/in/keerthi-prasanth-ravichandran-b15b84252/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block transition-all transform hover:scale-110"
+                className="inline-block transition-all transform hover:scale-125"
               >
                 <img
                   src={LinkedIn_logo}
@@ -180,7 +181,7 @@ function Contact({ isLightMode }) {
                 href="https://github.com/keerthiprasanth"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block transition-all transform hover:scale-110"
+                className="inline-block transition-all transform hover:scale-125"
               >
                 <img
                   src={GitHub_logo}
@@ -189,10 +190,22 @@ function Contact({ isLightMode }) {
                 />
               </a>
               <a
+                href="https://leetcode.com/u/keerthi_prasanth/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-all transform hover:scale-125"
+              >
+                <img
+                  src={LeetCode_logo}
+                  className="w-8"
+                  alt="LeetCode"
+                />
+              </a>
+              <a
                 href="https://www.instagram.com/keerthi_prasanth_r/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block transition-all transform hover:scale-110"
+                className="inline-block transition-all transform hover:scale-125"
               >
                 <img
                   src={Instagram_logo}
@@ -204,7 +217,7 @@ function Contact({ isLightMode }) {
                 href="mailto:rkpkeerthi22@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block transition-all transform hover:scale-110"
+                className="inline-block transition-all transform hover:scale-125"
               >
                 <img
                   src={Gmail_logo}

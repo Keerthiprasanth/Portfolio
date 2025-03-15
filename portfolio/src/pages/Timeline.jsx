@@ -23,7 +23,8 @@ function Timeline({ isLightMode }) {
       location: "Door Valley, Leicester, UK",
       date: "Jan 2025 - Present",
       icon: Door_Valley_logo,
-      content: "//////// CONTENT REQUIRED ////////",
+      content:
+        "Door Valley is a fire door manufacturing company headquartered in the midlands of the United Kingdom. My responsibilities here involve software development and digital marketing. I collaborated with cross-functional teams on system upgrades, ensuring minimal downtime and offering technical assistance to end-users by addressing software issues efficiently. Working with a diverse set of individuals, I am also in the position of handling the digital marketing platforms and delivering the required assistance for the overseas sales team.",
     },
     {
       id: 1,
@@ -32,16 +33,17 @@ function Timeline({ isLightMode }) {
       date: "Sept 2022 - Jan 2024",
       icon: UOL_logo,
       content:
-        "Modules: Mobile and Web Applications, Advanced Web Technologies, Software Measurement and Quality Assurance, Interactive Development and User Experience.",
+        "My master's degree involves in a wide range of learning to kick start my career as Software Engineer. Key modules includes Mobile and Web Applications, Advanced Web Technologies, Software Measurement and Quality Assurance, Interactive Design and User Experience.",
     },
     {
       id: 2,
-      title: "Graduate Trainee",
+      title: "Software Developer Trainee",
       location: "Tata Consultancy Services (TCS), Chennai, India",
       date: "Aug 2021 - Sept 2022",
       icon: TCS_logo,
+      // "Gained proficiency in Java, JavaScript, HTML, CSS, and Python through immersive training. Developed a gaming map using Blender and Unity, focusing on 3D modeling and game development. Managed and maintained lease documents for US clients using IBM’s Tririga software, ensuring data accuracy and compliance.",
       content:
-        "Gained proficiency in Java, JavaScript, HTML, CSS, and Python through immersive training. Developed a gaming map using Blender and Unity, focusing on 3D modeling and game development. Managed and maintained lease documents for US clients using IBM’s Tririga software, ensuring data accuracy and compliance.",
+        "Tata Consultancy Services is an IT services, consulting and business solutions organization that has been partnering with many of the world’s largest businesses in their transformation journeys for more than 50 years. I worked for US-based real estate clients by developing the lease management workflows using Tririga as the integration software. I created automated workflows to manage the lifecycle of a lease agreement such as lease creation, approval process, renewals and terminations. Collaborated as a team player by actively participating in project discussions and supporting colleagues to achieve common goals.",
     },
     {
       id: 3,
@@ -50,7 +52,7 @@ function Timeline({ isLightMode }) {
       date: "June 2018 - May 2021",
       icon: SKASC_logo,
       content:
-        "Modules: Software Engineering, Mobile Application Development, Data Structures and Algorithms, Java, Python, Operating Systems, Digital Fundamentals and Architecture, Data Communication and Networks.",
+        "This bachelor's degree is a strong foundation for me in basics of programming. Key modules includes Software Engineering, Mobile Application Development, Data Structures and Algorithms, Java, Operating Systems, Digital Fundamentals and Architecture, Data Communication and Networks.",
     },
   ];
 
@@ -62,12 +64,16 @@ function Timeline({ isLightMode }) {
           theme
             ? "bg-customTextColor text-customTextColor"
             : "bg-customBackground text-customBackground"
-        } font-volkhov`}
+        } font-volkhov text-justify`}
       >
         <div className="text-center mb-4">
-          <h1 className={`text-3xl font-semibold ${
-                  theme ? "text-customBackground" : "text-customTextColor"
-                }`}>Timeline</h1>
+          <h1
+            className={`text-3xl font-semibold ${
+              theme ? "text-customBackground" : "text-customTextColor"
+            }`}
+          >
+            Timeline
+          </h1>
         </div>
 
         <VerticalTimeline lineColor={isLightMode ? "#000000" : "#ffffff"}>
@@ -76,7 +82,7 @@ function Timeline({ isLightMode }) {
               key={element.id}
               date={element.date}
               dateStyle={{
-                background: "#ffffff"
+                background: "#ffffff",
               }}
               dateClassName={`font-bold text-red 
               // {

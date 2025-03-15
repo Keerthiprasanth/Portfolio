@@ -52,7 +52,7 @@ function Home({ isLightMode }) {
             />
           </div>
 
-          <div className="flex justify-center mt-20 md:mt-14 hover:text-gray-400">
+          <div className="flex justify-center mt-14 hover:text-gray-400">
             {/* <p className="mr-4">Explore my skills</p> */}
             <Link
               to="#skills"
