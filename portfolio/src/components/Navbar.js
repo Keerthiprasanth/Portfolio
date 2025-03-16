@@ -4,6 +4,7 @@ import { MdOutlineWbSunny } from "react-icons/md";
 import { Link } from "react-scroll";
 // import "./Navbar.css"
 import "../App.css";
+import KP_logo from "../images/KP_logo.png";
 
 function Navbar({ isLightMode, toggleTheme }) {
   const navRef = useRef();
@@ -20,11 +21,18 @@ function Navbar({ isLightMode, toggleTheme }) {
           : "bg-customBackground text-customTextColor"
       } fixed w-screen md:w-screen top-0 left-0 z-50 font-volkhov`}
     >
-      <h1>KP</h1>
+      {/* <h1>KP</h1> */}
+      <img
+        src={KP_logo}
+        alt="Logo"
+        className={`w-12 h-8 object-cover`}
+      />{" "}
       <nav ref={navRef}>
         <Link
           to="home"
+          onClick={showNavbar}
           smooth={true}
+          offset={-80}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >
@@ -32,7 +40,9 @@ function Navbar({ isLightMode, toggleTheme }) {
         </Link>
         <Link
           to="skills"
+          onClick={showNavbar}
           smooth={true}
+          offset={-80}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >
@@ -40,7 +50,9 @@ function Navbar({ isLightMode, toggleTheme }) {
         </Link>
         <Link
           to="projects"
+          onClick={showNavbar}
           smooth={true}
+          offset={-80}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >
@@ -48,7 +60,9 @@ function Navbar({ isLightMode, toggleTheme }) {
         </Link>
         <Link
           to="timeline"
+          onClick={showNavbar}
           smooth={true}
+          offset={-80}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >
@@ -56,7 +70,9 @@ function Navbar({ isLightMode, toggleTheme }) {
         </Link>
         <Link
           to="contact"
+          onClick={showNavbar}
           smooth={true}
+          offset={-80}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >

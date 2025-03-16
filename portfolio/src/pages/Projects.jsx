@@ -2,6 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ProjectsPage from "../components/ProjectsPage";
 import Pagination from "../components/Pagination";
+import Portfolio_image from "../images/Portfolio_Image.png";
+import WOW_Productions_image from "../images/WOW_Productions.png";
+import Preference_Selection_image from "../images/Preference_Selection.png"
 
 function Projects({ isLightMode }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,6 +19,7 @@ function Projects({ isLightMode }) {
   const projects = [
     {
       title: "My Personal Portfolio",
+      image: Portfolio_image,
       tools: "ReactJS, TailwindCSS, EmailJS, GitHub Pages",
       shortDescription:
         "My React portfolio is a dynamic showcase of my skills, projects and experience. With a clean design, it highlights expertise in React, responsive web development, and innovative implementations. Designed the website with TailwindCSS and hosted it through the GitHub Pages. Used react libraries like Vertical Timeline Element, React Scroll, and the react hooks like useRef to set up an Interseciton Observer for handling the animations when the threshold of the section reaches 30%. Designed the website with different theme modes to provide a better user experience.",
@@ -24,6 +28,7 @@ function Projects({ isLightMode }) {
     },
     {
       title: "W.O.W Productions Event",
+      image: WOW_Productions_image,
       tools: "ReactJS, TailwindCSS, Netlify, Google Maps API",
       shortDescription:
         "W.O.W Productions Presents is a heel dance class event organisers with a party gaming experience. Developed a responsive website for promoting the sales of an event held by them on December 2024. Integrated the website with the Google Map api to provide a complete guidance to the location and Event Brite api for the ticket sales. The use of React components, external content fetching, and modular design principles contribute to a scalable and maintainable codebase, resulting in future improvements.",
@@ -32,6 +37,7 @@ function Projects({ isLightMode }) {
     },
     {
       title: "Preference-based Group Allocation System",
+      image: Preference_Selection_image,
       tools: "React.js, Node.js, Express.js, MongoDB, JWT, Nodmailer",
       shortDescription:
         "Facilitated group allocation for the ‘Personal and Group Skills’ module at the University of Leicester, resulting in a 50% reduction in allocation time and increased user satisfaction by 35%. User-centric React project with student-teacher logins, profiles, email notifications, topic preferences and availabilities. Developed an efficient group allocation algorithm considering user preferences and enhancing group formation. Implemented robust data security measures, including bcrypt hashing for secure password storage and JWT (JSON Web Token) for user authentication, ensuring data security and privacy.",

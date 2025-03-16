@@ -81,13 +81,10 @@ function Timeline({ isLightMode }) {
             <VerticalTimelineElement
               key={element.id}
               date={element.date}
-              dateStyle={{
-                background: "#ffffff",
-              }}
-              dateClassName={`font-bold text-red 
-              // {
-              //   isLightMode ? "text-customBackground" : "text-customTextColor"
-              // }
+              dateClassName={`font-bold
+              ${
+                isLightMode ? "text-gray-500" : "text-gray-400"
+              }
               `}
               contentStyle={{
                 background: isLightMode ? "#000000" : "#ffffff",

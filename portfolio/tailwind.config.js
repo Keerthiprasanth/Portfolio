@@ -10,6 +10,7 @@ module.exports = {
         },
         customTextColor: {
           DEFAULT: "#F8F7F9",
+          // DEFAULT: "#F3E3E5"
         },
       },
       keyframes: {

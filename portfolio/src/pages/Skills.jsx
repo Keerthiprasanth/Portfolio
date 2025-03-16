@@ -13,6 +13,7 @@ import TailwindCSS_logo from "../images/TailwindCSS_logo.svg";
 import Bootstrap_logo from "../images/Bootstrap_logo.svg";
 import Git_logo from "../images/Git_logo.png";
 import GitHub_logo from "../images/GitHub_logo.png";
+import Netlify_logo from "../images/Netlify_logo.png";
 
 function Skills({ isLightMode }) {
   const skillsRef = useRef(null);
@@ -71,10 +72,15 @@ function Skills({ isLightMode }) {
       // logo: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/31/tailwind.png",
       logo: TailwindCSS_logo,
     },
+    // {
+    //   name: "Bootstrap",
+    //   // logo: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+    //   logo: Bootstrap_logo,
+    // },
     {
-      name: "Bootstrap",
+      name: "Netlify",
       // logo: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
-      logo: Bootstrap_logo,
+      logo: Netlify_logo,
     },
     {
       name: "Git",
@@ -131,7 +137,7 @@ function Skills({ isLightMode }) {
           {skillsList.map((skill, index) => (
             <li
               key={index}
-              className={`p-2 md:p-4 flex flex-col items-center justify-center transition transform hover:-translate-y-1 hover:shadow-2xl rounded-md opacity-0 ${
+              className={`p-2 md:p-4 flex flex-col items-center transition transform hover:-translate-y-1 hover:shadow-2xl rounded-md opacity-0 h-32 md:h-40 ${
                 theme
                   ? "bg-customBackground text-customTextColor shadow-customBackground"
                   : "bg-customTextColor text-customBackground"
@@ -139,19 +145,18 @@ function Skills({ isLightMode }) {
               ${isVisible ? "animate-fadeInTopToBottom" : ""}`}
               style={{
                 animationDelay: isVisible ? `${index * 0.1}s` : "0s",
-                // opacity: isVisible ? 1 : 0,
               }}
             >
-              <img
-                src={skill.logo}
-                alt={`${skill.name} logo`}
-                className="w-20 md:w-24"
-              />
-              <div className="relative">
-                <p className="mt-2 text-sm md:text-base text-center bottom-0">
-                  {skill.name}
-                </p>
+              <div className="flex flex-grow justify-center items-center h-full">
+                <img
+                  src={skill.logo}
+                  alt={`${skill.name} logo`}
+                  className="w-16 md:w-20"
+                />
               </div>
+              <p className="mt-auto text-sm md:text-base text-center">
+                {skill.name}
+              </p>
             </li>
           ))}
         </ul>
