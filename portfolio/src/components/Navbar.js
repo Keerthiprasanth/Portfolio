@@ -32,7 +32,7 @@ function Navbar({ isLightMode, toggleTheme }) {
           to="home"
           onClick={showNavbar}
           smooth={true}
-          offset={-80}
+          offset={-90}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >
@@ -42,7 +42,7 @@ function Navbar({ isLightMode, toggleTheme }) {
           to="skills"
           onClick={showNavbar}
           smooth={true}
-          offset={-80}
+          offset={-10}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >
@@ -52,7 +52,7 @@ function Navbar({ isLightMode, toggleTheme }) {
           to="projects"
           onClick={showNavbar}
           smooth={true}
-          offset={-80}
+          offset={-10}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >
@@ -62,7 +62,7 @@ function Navbar({ isLightMode, toggleTheme }) {
           to="timeline"
           onClick={showNavbar}
           smooth={true}
-          offset={-80}
+          offset={-10}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >
@@ -72,14 +72,14 @@ function Navbar({ isLightMode, toggleTheme }) {
           to="contact"
           onClick={showNavbar}
           smooth={true}
-          offset={-80}
+          offset={-10}
           duration={500}
           className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
         >
           Contact
         </Link>
         <button
-          className="nav-btn nav-close-btn p-1 cursor-pointer bg-transparent border-none outline-none decoration-red-700 invisible opacity-0 text-base"
+          className="nav-btn nav-close-btn text-4xl p-1 cursor-pointer bg-transparent border-none outline-none decoration-red-700 invisible opacity-0"
           onClick={showNavbar}
         >
           <FaTimes />

@@ -38,10 +38,10 @@ function Home({ isLightMode }) {
             Hello and welcome to my portfolio!
           </h1>
           <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-2 md:mt-8">
-            I'm <span>Keerthi Prasanth Ravichandran</span>, based in the UK
+            <span className="bg-gradient-to-r from-additionalColors-4 via-additionalColors-1 to-additionalColors-3 text-transparent bg-clip-text">I'm Keerthi Prasanth Ravichandran,</span> based in the UK
           </h1>
 
-          <div className="text-xl mt-6">
+          <div className="text-xl md:text-2xl font-semibold mt-6">
             <Typewriter
               options={{
                 autoStart: true,
@@ -53,7 +53,6 @@ function Home({ isLightMode }) {
           </div>
 
           <div className="flex justify-center mt-14 hover:text-gray-400">
-            {/* <p className="mr-4">Explore my skills</p> */}
             <Link
               to="#skills"
               smooth={true}

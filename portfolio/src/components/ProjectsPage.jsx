@@ -20,7 +20,7 @@ function ProjectsPage({ projects, isLightMode }) {
         >
           {project.image && (
             <div
-              className={`w-full h-auto ${
+              className={`w-full h-auto shadow-lg ${
                 isLightMode
                   ? "bg-customBackground text-customTextColor"
                   : "bg-customTextColor text-customBackground"

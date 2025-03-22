@@ -107,8 +107,8 @@ function Contact({ isLightMode }) {
             <input
               className={`rounded-lg pl-3 h-10 md:h-12 transition-opacity opacity-0 transform ${
                 theme
-                  ? "bg-gray-500 text-customTextColor"
-                  : "bg-customTextColor text-customBackground"
+                  ? "bg-lightTheme-50 text-customBackground placeholder-gray-400"
+                  : "bg-darkTheme-TEXT text-customBackground placeholder-gray-600"
               } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
@@ -122,8 +122,8 @@ function Contact({ isLightMode }) {
             <input
               className={`rounded-lg pl-3 h-10 md:h-12 text-customBackground transition-opacity opacity-0 transform ${
                 theme
-                  ? "bg-gray-500 text-customTextColor"
-                  : "bg-customTextColor text-customBackground"
+                  ? "bg-lightTheme-50 text-customBackground placeholder-gray-400"
+                  : "bg-darkTheme-TEXT text-customBackground placeholder-gray-600"
               } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
@@ -137,8 +137,8 @@ function Contact({ isLightMode }) {
             <textarea
               className={`rounded-lg p-3 h-32 md:h-40 text-customBackground transition-opacity opacity-0 transform ${
                 theme
-                  ? "bg-gray-500 text-customTextColor"
-                  : "bg-customTextColor text-customBackground"
+                  ? "bg-lightTheme-50 text-customBackground placeholder-gray-400"
+                  : "bg-darkTheme-TEXT text-customBackground placeholder-gray-600"
               } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
@@ -150,10 +150,10 @@ function Contact({ isLightMode }) {
             ></textarea>
             <button
               type="submit"
-              className={`rounded-lg h-12 w-20 border-2 hover:bg-customTextColor hover:text-customBackground transition-opacity opacity-0 transform ${
+              className={`rounded-lg h-12 w-20 border-2 transition-opacity opacity-0 transform ${
                 theme
-                  ? "bg-customTextColor text-customBackground border-customBackground"
-                  : "bg-customBackground text-customTextColor border-customTextColor "
+                  ? "bg-customTextColor text-customBackground border-customBackground hover:bg-customBackground hover:text-customTextColor"
+                  : "bg-customBackground text-customTextColor border-customTextColor hover:bg-customTextColor hover:text-customBackground"
               } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}

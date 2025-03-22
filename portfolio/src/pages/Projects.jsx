@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ProjectsPage from "../components/ProjectsPage";
 import Pagination from "../components/Pagination";
 import Portfolio_image from "../images/Portfolio_Image.png";
@@ -80,11 +80,22 @@ function Projects({ isLightMode }) {
     indexOfLastProject
   );
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+
+    if (projectsSection.current) {
+      projectsSection.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  const projectsSection = useRef(null);
 
   return (
     <div>
-      <section
+      <section ref={projectsSection}
         className={`pt-16 p-4 md:p-8 md:pt-16 h-auto min-h-screen flex flex-col items-center transition-all duration-500 ${
           theme
             ? "bg-customTextColor text-customBackground"

@@ -60,10 +60,10 @@ function Timeline({ isLightMode }) {
     <div>
       <section
         id="timeline"
-        className={`pt-16 p-4 min-h-screen flex flex-col items-center transition-all duration-500 ${
+        className={`pt-16 p-4 min-h-screen flex flex-col items-center text-customBackground transition-all duration-500 ${
           theme
-            ? "bg-customTextColor text-customTextColor"
-            : "bg-customBackground text-customBackground"
+            ? "bg-customTextColor"
+            : "bg-customBackground"
         } font-volkhov text-justify`}
       >
         <div className="text-center mb-4">
@@ -83,19 +83,21 @@ function Timeline({ isLightMode }) {
               date={element.date}
               dateClassName={`font-bold
               ${
-                isLightMode ? "text-gray-500" : "text-gray-400"
+                isLightMode
+                  ? "md:text-customBackground"
+                  : "md:text-customTextColor"
               }
               `}
               contentStyle={{
-                background: isLightMode ? "#000000" : "#ffffff",
+                background: isLightMode ? "#D2D7DF" : "#BDBBB0",
                 maxWidth: "600px",
                 padding: "8px 12px",
                 fontSize: "14px",
               }}
               contentArrowStyle={{
                 borderRight: isLightMode
-                  ? "12px solid #000000"
-                  : "12px solid #ffffff",
+                  ? "12px solid #D2D7DF"
+                  : "12px solid #BDBBB0",
               }}
               iconStyle={{
                 background: "#ffffff",
@@ -111,23 +113,17 @@ function Timeline({ isLightMode }) {
               }
             >
               <h3
-                className={`text-base md:text-lg font-bold ${
-                  theme ? "text-customTextColor" : "text-customBackground"
-                }`}
+                className={`text-base md:text-xl font-bold `}
               >
                 {element.title}
               </h3>
               <h5
-                className={`text-sm md:text-base font-medium ${
-                  theme ? "text-gray-400" : "text-gray-600"
-                }`}
+                className={`text-sm md:text-base`}
               >
                 {element.location}
               </h5>
               <p
-                className={`text-xs md:text-sm lg:text-base mt-1 ${
-                  theme ? "text-customTextColor" : "text-customBackground"
-                }`}
+                className={`text-xs md:text-sm lg:text-base mt-1`}
                 style={{ fontSize: "13px" }}
               >
                 {element.content}
