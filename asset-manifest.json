@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.0f204a43.css",
-    "main.js": "/Portfolio/static/js/main.c445a09b.js",
+    "main.css": "/Portfolio/static/css/main.cf05ad61.css",
+    "main.js": "/Portfolio/static/js/main.645a312f.js",
     "static/media/WOW_Productions.png": "/Portfolio/static/media/WOW_Productions.cfe4dc2f45e19ff6421f.png",
     "static/media/Instagram_logo.webp": "/Portfolio/static/media/Instagram_logo.ef207ba5fdd9f13cf80c.webp",
     "static/media/Cropped_profile.jpeg": "/Portfolio/static/media/Cropped_profile.753646fad093cca95abe.jpeg",
     "static/media/Portfolio_Image.png": "/Portfolio/static/media/Portfolio_Image.756ceec7beb0dbde5c4d.png",
     "static/media/Preference_Selection.png": "/Portfolio/static/media/Preference_Selection.ec96e9a26856cd2193a4.png",
+    "static/media/HTML_CSS_logo.png": "/Portfolio/static/media/HTML_CSS_logo.108549524a13e1f1b282.png",
     "static/media/Git_logo.png": "/Portfolio/static/media/Git_logo.8dd3688bb1415872d423.png",
     "static/media/UOL_logo.png": "/Portfolio/static/media/UOL_logo.18948edd1757ca5bfadc.png",
     "static/media/ExpressJS_logo.png": "/Portfolio/static/media/ExpressJS_logo.a20844b632fa1033dbfb.png",
-    "static/media/HTML_CSS_logo.png": "/Portfolio/static/media/HTML_CSS_logo.daef0cdec3e13d30ee95.png",
     "static/media/Android_studio_logo.svg": "/Portfolio/static/media/Android_studio_logo.5db391aa50ce91670924a7daeb4eaec2.svg",
     "static/media/TCS_logo.png": "/Portfolio/static/media/TCS_logo.e3bf551cf128afb08d62.png",
     "static/media/NodeJS_logo.webp": "/Portfolio/static/media/NodeJS_logo.c618b9e15f11524da6ae.webp",
@@ -19,16 +19,17 @@
     "static/media/SKASC_logo.avif": "/Portfolio/static/media/SKASC_logo.0c0ea1ad81c6bf256b5d.avif",
     "static/media/LinkedIn_logo.png": "/Portfolio/static/media/LinkedIn_logo.68ac41e1459436bfd38f.png",
     "static/media/JavaScript_logo.png": "/Portfolio/static/media/JavaScript_logo.266bd9fb2663dcc057b4.png",
-    "static/media/Java_Logo.webp": "/Portfolio/static/media/Java_Logo.2ad736f544afeb32b9fe.webp",
     "static/media/Gmail_logo.webp": "/Portfolio/static/media/Gmail_logo.68a5cf1012df3c145dda.webp",
+    "static/media/Netlify_logo.svg": "/Portfolio/static/media/Netlify_logo.fde92d531123ec478162c91562d1d659.svg",
     "static/media/Bootstrap_logo.svg": "/Portfolio/static/media/Bootstrap_logo.3a162f65200426203695ee878e6b62fb.svg",
+    "static/media/Java_logo.svg": "/Portfolio/static/media/Java_logo.3c5854fce4aa30ad19d569c45d5ce874.svg",
     "index.html": "/Portfolio/index.html",
     "static/media/TailwindCSS_logo.svg": "/Portfolio/static/media/TailwindCSS_logo.79614a5f61617ba49a0891494521226b.svg",
-    "main.0f204a43.css.map": "/Portfolio/static/css/main.0f204a43.css.map",
-    "main.c445a09b.js.map": "/Portfolio/static/js/main.c445a09b.js.map"
+    "main.cf05ad61.css.map": "/Portfolio/static/css/main.cf05ad61.css.map",
+    "main.645a312f.js.map": "/Portfolio/static/js/main.645a312f.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f204a43.css",
-    "static/js/main.c445a09b.js"
+    "static/css/main.cf05ad61.css",
+    "static/js/main.645a312f.js"
   ]
 }
