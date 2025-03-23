@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.bc48f8db.css",
-    "main.js": "/Portfolio/static/js/main.4f5a595c.js",
+    "main.css": "/Portfolio/static/css/main.5ec4fbe8.css",
+    "main.js": "/Portfolio/static/js/main.93f78bec.js",
     "static/media/WOW_Productions.png": "/Portfolio/static/media/WOW_Productions.cfe4dc2f45e19ff6421f.png",
     "static/media/Instagram_logo.webp": "/Portfolio/static/media/Instagram_logo.ef207ba5fdd9f13cf80c.webp",
     "static/media/Cropped_profile.jpeg": "/Portfolio/static/media/Cropped_profile.753646fad093cca95abe.jpeg",
@@ -21,15 +21,14 @@
     "static/media/JavaScript_logo.png": "/Portfolio/static/media/JavaScript_logo.266bd9fb2663dcc057b4.png",
     "static/media/Gmail_logo.webp": "/Portfolio/static/media/Gmail_logo.68a5cf1012df3c145dda.webp",
     "static/media/Netlify_logo.svg": "/Portfolio/static/media/Netlify_logo.fde92d531123ec478162c91562d1d659.svg",
-    "static/media/Bootstrap_logo.svg": "/Portfolio/static/media/Bootstrap_logo.3a162f65200426203695ee878e6b62fb.svg",
     "static/media/Java_logo.svg": "/Portfolio/static/media/Java_logo.3c5854fce4aa30ad19d569c45d5ce874.svg",
     "index.html": "/Portfolio/index.html",
     "static/media/TailwindCSS_logo.svg": "/Portfolio/static/media/TailwindCSS_logo.79614a5f61617ba49a0891494521226b.svg",
-    "main.bc48f8db.css.map": "/Portfolio/static/css/main.bc48f8db.css.map",
-    "main.4f5a595c.js.map": "/Portfolio/static/js/main.4f5a595c.js.map"
+    "main.5ec4fbe8.css.map": "/Portfolio/static/css/main.5ec4fbe8.css.map",
+    "main.93f78bec.js.map": "/Portfolio/static/js/main.93f78bec.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc48f8db.css",
-    "static/js/main.4f5a595c.js"
+    "static/css/main.5ec4fbe8.css",
+    "static/js/main.93f78bec.js"
   ]
 }
