@@ -89,7 +89,7 @@ function Timeline({ isLightMode }) {
               }
               `}
               contentStyle={{
-                background: isLightMode ? "#D2D7DF" : "#BDBBB0",
+                background: isLightMode ? "#D2D7DF" : "#F8F7F9",
                 maxWidth: "600px",
                 padding: "8px 12px",
                 fontSize: "14px",
@@ -97,7 +97,7 @@ function Timeline({ isLightMode }) {
               contentArrowStyle={{
                 borderRight: isLightMode
                   ? "12px solid #D2D7DF"
-                  : "12px solid #BDBBB0",
+                  : "12px solid #F8F7F9",
               }}
               iconStyle={{
                 background: "#ffffff",

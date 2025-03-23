@@ -140,7 +140,7 @@ function Skills({ isLightMode }) {
               className={`p-2 md:p-4 flex flex-col items-center transition transform hover:-translate-y-1 shadow-sm rounded-md opacity-0 h-32 md:h-40 ${
                 theme
                   ? "bg-customBackground-50 text-customBackground shadow-customBackground"
-                  : "bg-darkTheme-TEXT text-customBackground shadow-customTextColor"
+                  : "bg-customTextColor text-customBackground shadow-customTextColor"
               }
               ${isVisible ? "animate-fadeInTopToBottom" : ""}`}
               style={{

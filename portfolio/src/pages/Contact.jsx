@@ -108,7 +108,7 @@ function Contact({ isLightMode }) {
               className={`rounded-lg pl-3 h-10 md:h-12 transition-opacity opacity-0 transform ${
                 theme
                   ? "bg-lightTheme-50 text-customBackground placeholder-gray-400"
-                  : "bg-darkTheme-TEXT text-customBackground placeholder-gray-600"
+                  : "bg-customTextColor text-customBackground placeholder-gray-600"
               } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
@@ -123,7 +123,7 @@ function Contact({ isLightMode }) {
               className={`rounded-lg pl-3 h-10 md:h-12 text-customBackground transition-opacity opacity-0 transform ${
                 theme
                   ? "bg-lightTheme-50 text-customBackground placeholder-gray-400"
-                  : "bg-darkTheme-TEXT text-customBackground placeholder-gray-600"
+                  : "bg-customTextColor text-customBackground placeholder-gray-600"
               } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
@@ -138,7 +138,7 @@ function Contact({ isLightMode }) {
               className={`rounded-lg p-3 h-32 md:h-40 text-customBackground transition-opacity opacity-0 transform ${
                 theme
                   ? "bg-lightTheme-50 text-customBackground placeholder-gray-400"
-                  : "bg-darkTheme-TEXT text-customBackground placeholder-gray-600"
+                  : "bg-customTextColor text-customBackground placeholder-gray-600"
               } ${
                 isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
               }`}
