@@ -123,7 +123,7 @@ function Skills({ isLightMode }) {
         } font-volkhov text-sm md:text-lg`}
         id="skills"
       >
-        <h1 className="text-3xl mb-8 font-semibold">Skills</h1>
+        <h1 className="text-3xl mb-8 font-semibold">About Me</h1>
 
         <div className="max-w-lg md:max-w-screen-xl text-center mb-4 md:mb-10">
           <p className="mb-2">
