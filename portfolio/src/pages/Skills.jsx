@@ -10,7 +10,7 @@ import NodeJS_logo from "../images/NodeJS_logo.webp";
 import ExpressJS_logo from "../images/ExpressJS_logo.png";
 import MongoDB_logo from "../images/MongoDB_logo2.png";
 import TailwindCSS_logo from "../images/TailwindCSS_logo.svg";
-import Bootstrap_logo from "../images/Bootstrap_logo.svg";
+// import Bootstrap_logo from "../images/Bootstrap_logo.svg";
 import Git_logo from "../images/Git_logo.png";
 import GitHub_logo from "../images/GitHub_logo.png";
 import Netlify_logo from "../images/Netlify_logo.svg";
@@ -126,6 +126,13 @@ function Skills({ isLightMode }) {
         <h1 className="text-3xl mb-8 font-semibold">Skills</h1>
 
         <div className="max-w-lg md:max-w-screen-xl text-center mb-4 md:mb-10">
+          <p className="mb-2">
+            I am a passionate Full-Stack Developer with a knack for building
+            scalable, efficient, and user-friendly web and android applications. With a
+            strong foundation in frontend and backend development, I specialize
+            in crafting seamless digital experiences that bridge the gap between
+            innovation and functionality.
+          </p>
           <p>
             As a software engineer, I've honed my skills in various technologies
             to deliver robust and efficient solutions. Here are some of the key

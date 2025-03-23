@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
-import GitHub_logo from "../images/GitHub_logo.png";
 
 function ProjectsPage({ projects, isLightMode }) {
   return (

@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Gmail_logo from "../images/Gmail_logo.webp";
 import Instagram_logo from "../images/Instagram_logo.webp";
 import GitHub_logo from "../images/GitHub_logo.png";
@@ -12,6 +14,8 @@ function Contact({ isLightMode }) {
   const [isVisible, setIsVisible] = useState(false);
 
   const [theme, setTheme] = useState(isLightMode);
+
+  // toast.configure();
 
   useEffect(() => {
     setTheme(isLightMode);
@@ -44,12 +48,28 @@ function Contact({ isLightMode }) {
       )
       .then(
         (response) => {
-          alert("Thanks for reaching out! I will get back to you soon");
+          toast.success("Message sent successfully!", {
+            position: "top-right",
+            autoClose: 3000, 
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+          // alert("Thanks for reaching out! I will get back to you soon");
           console.log("Success:", response);
           form.current.reset();
         },
         (error) => {
-          alert("Something went wrong. Try again.");
+          toast.error("Something went wrong. Try again.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+          // alert("Something went wrong. Try again.");
           console.error("Error:", error);
         }
       );
@@ -109,9 +129,7 @@ function Contact({ isLightMode }) {
                 theme
                   ? "bg-lightTheme-50 text-customBackground placeholder-gray-400"
                   : "bg-customTextColor text-customBackground placeholder-gray-600"
-              } ${
-                isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
-              }`}
+              } ${isVisible ? "animate-fadeInLeftToRight" : "opacity-0"}`}
               type="email"
               name="email"
               placeholder="Enter Your Email ID"
@@ -124,9 +142,7 @@ function Contact({ isLightMode }) {
                 theme
                   ? "bg-lightTheme-50 text-customBackground placeholder-gray-400"
                   : "bg-customTextColor text-customBackground placeholder-gray-600"
-              } ${
-                isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
-              }`}
+              } ${isVisible ? "animate-fadeInLeftToRight" : "opacity-0"}`}
               type="text"
               placeholder="Enter Your Name"
               name="name"
@@ -139,9 +155,7 @@ function Contact({ isLightMode }) {
                 theme
                   ? "bg-lightTheme-50 text-customBackground placeholder-gray-400"
                   : "bg-customTextColor text-customBackground placeholder-gray-600"
-              } ${
-                isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
-              }`}
+              } ${isVisible ? "animate-fadeInLeftToRight" : "opacity-0"}`}
               placeholder="Enter Your Message"
               name="message"
               required
@@ -154,9 +168,7 @@ function Contact({ isLightMode }) {
                 theme
                   ? "bg-customTextColor text-customBackground border-customBackground hover:bg-customBackground hover:text-customTextColor"
                   : "bg-customBackground text-customTextColor border-customTextColor hover:bg-customTextColor hover:text-customBackground"
-              } ${
-                isVisible ? "animate-fadeInLeftToRight" : "opacity-0"
-              }`}
+              } ${isVisible ? "animate-fadeInLeftToRight" : "opacity-0"}`}
               style={{ animationDelay: "0.8s" }}
             >
               Send
@@ -171,11 +183,7 @@ function Contact({ isLightMode }) {
                 rel="noopener noreferrer"
                 className="inline-block transition-all transform hover:scale-125"
               >
-                <img
-                  src={LinkedIn_logo}
-                  className="w-8"
-                  alt="LinkedIn"
-                />
+                <img src={LinkedIn_logo} className="w-8" alt="LinkedIn" />
               </a>
               <a
                 href="https://github.com/keerthiprasanth"
@@ -195,11 +203,7 @@ function Contact({ isLightMode }) {
                 rel="noopener noreferrer"
                 className="inline-block transition-all transform hover:scale-125"
               >
-                <img
-                  src={LeetCode_logo}
-                  className="w-8"
-                  alt="LeetCode"
-                />
+                <img src={LeetCode_logo} className="w-8" alt="LeetCode" />
               </a>
               <a
                 href="https://www.instagram.com/keerthi_prasanth_r/"
@@ -207,11 +211,7 @@ function Contact({ isLightMode }) {
                 rel="noopener noreferrer"
                 className="inline-block transition-all transform hover:scale-125"
               >
-                <img
-                  src={Instagram_logo}
-                  className="w-8"
-                  alt="Instagram"
-                />
+                <img src={Instagram_logo} className="w-8" alt="Instagram" />
               </a>
               <a
                 href="mailto:rkpkeerthi22@gmail.com"
@@ -219,11 +219,7 @@ function Contact({ isLightMode }) {
                 rel="noopener noreferrer"
                 className="inline-block transition-all transform hover:scale-125"
               >
-                <img
-                  src={Gmail_logo}
-                  className="w-8"
-                  alt="Gmail"
-                />
+                <img src={Gmail_logo} className="w-8" alt="Gmail" />
               </a>
             </div>
           </div>

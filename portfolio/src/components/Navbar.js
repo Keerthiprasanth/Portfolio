@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import { FaBars, FaTimes, FaMoon } from "react-icons/fa";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { Link } from "react-scroll";
@@ -34,7 +34,7 @@ function Navbar({ isLightMode, toggleTheme }) {
           smooth={true}
           offset={-90}
           duration={500}
-          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+          className="m-0 mx-6 hover:text-additionalColors-6 md:hover:text-gray-400 cursor-pointer"
         >
           Home
         </Link>
@@ -44,7 +44,7 @@ function Navbar({ isLightMode, toggleTheme }) {
           smooth={true}
           offset={-10}
           duration={500}
-          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+          className="m-0 mx-6 hover:text-additionalColors-6 md:hover:text-gray-400 cursor-pointer"
         >
           Skills
         </Link>
@@ -54,7 +54,7 @@ function Navbar({ isLightMode, toggleTheme }) {
           smooth={true}
           offset={-10}
           duration={500}
-          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+          className="m-0 mx-6 hover:text-additionalColors-6 md:hover:text-gray-400 cursor-pointer"
         >
           Projects
         </Link>
@@ -64,7 +64,7 @@ function Navbar({ isLightMode, toggleTheme }) {
           smooth={true}
           offset={-10}
           duration={500}
-          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+          className="m-0 mx-6 hover:text-additionalColors-6 md:hover:text-gray-400 cursor-pointer"
         >
           Timeline
         </Link>
@@ -74,9 +74,9 @@ function Navbar({ isLightMode, toggleTheme }) {
           smooth={true}
           offset={-10}
           duration={500}
-          className="m-0 mx-6 hover:text-gray-400 cursor-pointer"
+          className="m-0 mx-6 hover:text-additionalColors-6 md:hover:text-gray-400 cursor-pointer"
         >
-          Contact
+          Contact Me
         </Link>
         <button
           className="nav-btn nav-close-btn text-4xl p-1 cursor-pointer bg-transparent border-none outline-none decoration-red-700 invisible opacity-0"

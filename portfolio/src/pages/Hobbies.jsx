@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 function Hobbies({ isLightMode }) {
   const [stats, setStats] = useState(null);
 
-  const [theme, setTheme] = useState(isLightMode);
+  // const [theme, setTheme] = useState(isLightMode);
 
-  useEffect(() => {
-    setTheme(isLightMode);
-  }, [isLightMode]);
+  // useEffect(() => {
+  //   setTheme(isLightMode);
+  // }, [isLightMode]);
 
   useEffect(() => {
     fetch("https://api.chess.com/pub/player/keerthiprasanthr/stats")

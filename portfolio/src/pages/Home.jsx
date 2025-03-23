@@ -24,7 +24,7 @@ function Home({ isLightMode }) {
         <div>
           <img
             src={profileImage}
-            alt="Profile Image"
+            alt="Profile"
             className={`w-56 h-56 md:w-64 md:h-64 mt-12 md:mt-4 rounded-full object-cover border ${
               theme
                 ? "shadow-md shadow-customBackground border-customBackground"

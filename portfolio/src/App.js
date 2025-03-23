@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Project from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Hobbies from "./pages/Hobbies";
+// import Hobbies from "./pages/Hobbies";
 import Home from "./pages/Home";
 import Timeline from "./pages/Timeline";
 import Skills from "./pages/Skills";
@@ -12,7 +14,7 @@ import Footer from "./components/Footer";
 
 function App() {
   const [isLightMode, setIsLightMode] = useState(() => {
-    return localStorage.getItem("theme") === "light";
+    return localStorage.getItem("theme") === "dark" ? false : true;;
   });
 
   useEffect(() => {
@@ -34,6 +36,7 @@ function App() {
           <Timeline isLightMode={isLightMode} />
           {/* <Hobbies isLightMode={isLightMode} /> */}
           <Contact isLightMode={isLightMode} />
+          <ToastContainer />
           <Footer isLightMode={isLightMode} />
       </div>
       </BrowserRouter>

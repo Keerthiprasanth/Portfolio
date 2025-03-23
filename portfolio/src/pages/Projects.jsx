@@ -18,7 +18,7 @@ function Projects({ isLightMode }) {
 
   const projects = [
     {
-      title: "My Personal Portfolio",
+      title: "Project 1: My Personal Portfolio",
       image: Portfolio_image,
       tools: "ReactJS, TailwindCSS, EmailJS, GitHub Pages",
       shortDescription:
@@ -27,7 +27,7 @@ function Projects({ isLightMode }) {
       liveLink: "https://keerthiprasanth.github.io/Portfolio/"
     },
     {
-      title: "W.O.W Productions Event",
+      title: "Project 2: W.O.W Productions Event",
       image: WOW_Productions_image,
       tools: "ReactJS, TailwindCSS, Netlify, Google Maps API",
       shortDescription:
@@ -36,7 +36,7 @@ function Projects({ isLightMode }) {
       liveLink: "https://wow-productions-presents.netlify.app/"
     },
     {
-      title: "Preference-based Group Allocation System",
+      title: "Project 3: Preference-based Group Allocation System",
       image: Preference_Selection_image,
       tools: "React.js, Node.js, Express.js, MongoDB, JWT, Nodmailer",
       shortDescription:
@@ -44,20 +44,20 @@ function Projects({ isLightMode }) {
       sourceCode: "https://github.com/Keerthiprasanth/Group_Allocation",
     },
     {
-      title: "Zen-Flow Yoga Planner",
+      title: "Project 4: Zen-Flow Yoga Planner",
       tools: "Node.js, Express.js, MongoDB, AWS-S3, Nodmailer, JWT",
       shortDescription: "Led a team of three as a Team Lead and Backend Developer to build a Yoga Class website, successfully delivering it on time. The platform provides access to pre-defined asanas based on user premium status and allows users to book live sessions with available Yoga academy staff. Implemented JWT authentication and Bcrypt hashing for providing a 100% secure user authentication and class authorization. Integrated AWS S3 Bucket to store and render asana images and videos on the frontend. The platform showcases the versatility and capabilities of modern web development, encapsulated in an efficient and engaging user experience.",
       sourceCode: "https://github.com/Keerthiprasanth/Yoga_class_planner",
     },
     {
-      title: "iGSE – An Energy Tool",
+      title: "Project 5: iGSE – An Energy Tool",
       tools: "Android Studio, XML, Java, MongoDB, JWT",
       shortDescription:
         "Enabled users to submit energy and gas consumption readings through their mobile phones, reducing data entry time by providing a scanner through camera and minimizing errors, resulting in higher data accuracy. Established an automated bill-generating system based on submitted readings, leading to a 85% reduction in billing errors and increased billing accuracy.",
       sourceCode: "https://github.com/Keerthiprasanth/ElectricityReading",
     },
     {
-      title: "Break-Up (An alternative to Split-Wise)",
+      title: "Project 6: Break-Up (An alternative to Split-Wise)",
       tools: "Java, MongoDB, Randoop, JWT",
       shortDescription:
         "Led a team of six as Scrum Master in the collaborative development of a bill-splitting application, ensuring efficient task allocation, progress tracking, and timely delivery of project milestones. Achieved a remarkable test coverage of 95% for 84 methods using Randoop and White-box testing. Engineered effective teamwork dynamics through structured stand-up meetings, sprint planning sessions, and retrospectives. Designed and executed a file access alert system to monitor and report file access activities. Streamlined communication channels using JIRA, resulting in a 30% reduction in project turnaround time.",
