@@ -46,7 +46,7 @@ function Navbar({ isLightMode, toggleTheme }) {
           duration={500}
           className="m-0 mx-6 hover:text-additionalColors-6 md:hover:text-gray-400 cursor-pointer"
         >
-          Skills
+          About Me
         </Link>
         <Link
           to="projects"
