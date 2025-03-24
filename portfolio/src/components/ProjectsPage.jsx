@@ -11,7 +11,7 @@ function ProjectsPage({ projects, isLightMode }) {
       {projects.map((project) => (
         <li
           key={project.title}
-          className={`p-4 transition-all duration-500 flex flex-col h-full ${
+          className={`p-4 transition-all duration-500 flex flex-col h-full text-left ${
             isLightMode
               ? "bg-customTextColor text-customBackground"
               : "bg-customBackground text-customTextColor"
