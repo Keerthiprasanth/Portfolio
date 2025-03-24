@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.5ec4fbe8.css",
-    "main.js": "/Portfolio/static/js/main.d8f54c20.js",
+    "main.css": "/Portfolio/static/css/main.65ffe0aa.css",
+    "main.js": "/Portfolio/static/js/main.c3a7fabe.js",
     "static/media/WOW_Productions.png": "/Portfolio/static/media/WOW_Productions.cfe4dc2f45e19ff6421f.png",
     "static/media/Instagram_logo.webp": "/Portfolio/static/media/Instagram_logo.ef207ba5fdd9f13cf80c.webp",
     "static/media/Cropped_profile.jpeg": "/Portfolio/static/media/Cropped_profile.753646fad093cca95abe.jpeg",
@@ -24,11 +24,11 @@
     "static/media/Java_logo.svg": "/Portfolio/static/media/Java_logo.3c5854fce4aa30ad19d569c45d5ce874.svg",
     "index.html": "/Portfolio/index.html",
     "static/media/TailwindCSS_logo.svg": "/Portfolio/static/media/TailwindCSS_logo.79614a5f61617ba49a0891494521226b.svg",
-    "main.5ec4fbe8.css.map": "/Portfolio/static/css/main.5ec4fbe8.css.map",
-    "main.d8f54c20.js.map": "/Portfolio/static/js/main.d8f54c20.js.map"
+    "main.65ffe0aa.css.map": "/Portfolio/static/css/main.65ffe0aa.css.map",
+    "main.c3a7fabe.js.map": "/Portfolio/static/js/main.c3a7fabe.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ec4fbe8.css",
-    "static/js/main.d8f54c20.js"
+    "static/css/main.65ffe0aa.css",
+    "static/js/main.c3a7fabe.js"
   ]
 }
