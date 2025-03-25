@@ -11,7 +11,7 @@ function ProjectsPage({ projects, isLightMode }) {
       {projects.map((project) => (
         <li
           key={project.title}
-          className={`p-4 transition-all duration-500 flex flex-col h-full text-left ${
+          className={`p-4 transition-all duration-500 flex flex-col h-full ${
             isLightMode
               ? "bg-customTextColor text-customBackground"
               : "bg-customBackground text-customTextColor"
@@ -29,7 +29,7 @@ function ProjectsPage({ projects, isLightMode }) {
             </div>
           )}
 
-          <h2 className="text-xl font-semibold mt-2 mb-2">{project.title}</h2>
+          <h2 className="text-xl text-left font-semibold mt-2 mb-2">{project.title}</h2>
 
           <div className="flex flex-wrap">
             {project.tools.split(", ").map((tool, index) => (
