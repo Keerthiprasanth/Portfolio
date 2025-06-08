@@ -19,12 +19,12 @@ function Timeline({ isLightMode }) {
   const items = [
     {
       id: 0,
-      title: "Digital Operations Associate",
+      title: "Business Systems Analyst",
       location: "Door Valley, Leicester, UK",
       date: "Jan 2025 - Present",
       icon: Door_Valley_logo,
       content:
-        "Door Valley is a fire door manufacturing company headquartered in the midlands of the United Kingdom. My responsibilities here involve software development and digital marketing. I collaborated with cross-functional teams on system upgrades, ensuring minimal downtime and offering technical assistance to end-users by addressing software issues efficiently. Working with a diverse set of individuals, I am also in the position of handling the digital marketing platforms and delivering the required assistance for the overseas sales team.",
+        "Door Valley is a fire door manufacturing company based in the Midlands, UK, with operations in both the UK and Sri Lanka. My role focuses primarily on Salesforce implementation, project coordination using Asana, and digital marketing support. I collaborate with cross-functional teams to streamline workflows, optimize Google Ads campaigns, and ensure smooth communication across offices. Additionally, I provide technical support, assist with system improvements, and support the overseas sales team with digital tools and insights. This role allows me to apply my software engineering background in a real-world, business-driven environment."
     },
     {
       id: 1,
