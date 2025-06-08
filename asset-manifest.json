@@ -1,12 +1,14 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.65ffe0aa.css",
-    "main.js": "/Portfolio/static/js/main.0c0e09b2.js",
+    "main.js": "/Portfolio/static/js/main.731e617a.js",
     "static/media/WOW_Productions.png": "/Portfolio/static/media/WOW_Productions.cfe4dc2f45e19ff6421f.png",
     "static/media/Instagram_logo.webp": "/Portfolio/static/media/Instagram_logo.ef207ba5fdd9f13cf80c.webp",
     "static/media/Cropped_profile.jpeg": "/Portfolio/static/media/Cropped_profile.753646fad093cca95abe.jpeg",
     "static/media/Portfolio_Image.png": "/Portfolio/static/media/Portfolio_Image.756ceec7beb0dbde5c4d.png",
     "static/media/Preference_Selection.png": "/Portfolio/static/media/Preference_Selection.ec96e9a26856cd2193a4.png",
+    "static/media/Asana_logo.png": "/Portfolio/static/media/Asana_logo.38045884492a7dbdcd02.png",
+    "static/media/Salesforce_logo.png": "/Portfolio/static/media/Salesforce_logo.dea12a2492e666f6b7bf.png",
     "static/media/HTML_CSS_logo.png": "/Portfolio/static/media/HTML_CSS_logo.108549524a13e1f1b282.png",
     "static/media/Git_logo.png": "/Portfolio/static/media/Git_logo.8dd3688bb1415872d423.png",
     "static/media/UOL_logo.png": "/Portfolio/static/media/UOL_logo.18948edd1757ca5bfadc.png",
@@ -20,15 +22,14 @@
     "static/media/LinkedIn_logo.png": "/Portfolio/static/media/LinkedIn_logo.68ac41e1459436bfd38f.png",
     "static/media/JavaScript_logo.png": "/Portfolio/static/media/JavaScript_logo.266bd9fb2663dcc057b4.png",
     "static/media/Gmail_logo.webp": "/Portfolio/static/media/Gmail_logo.68a5cf1012df3c145dda.webp",
-    "static/media/Netlify_logo.svg": "/Portfolio/static/media/Netlify_logo.fde92d531123ec478162c91562d1d659.svg",
     "static/media/Java_logo.svg": "/Portfolio/static/media/Java_logo.3c5854fce4aa30ad19d569c45d5ce874.svg",
     "index.html": "/Portfolio/index.html",
     "static/media/TailwindCSS_logo.svg": "/Portfolio/static/media/TailwindCSS_logo.79614a5f61617ba49a0891494521226b.svg",
     "main.65ffe0aa.css.map": "/Portfolio/static/css/main.65ffe0aa.css.map",
-    "main.0c0e09b2.js.map": "/Portfolio/static/js/main.0c0e09b2.js.map"
+    "main.731e617a.js.map": "/Portfolio/static/js/main.731e617a.js.map"
   },
   "entrypoints": [
     "static/css/main.65ffe0aa.css",
-    "static/js/main.0c0e09b2.js"
+    "static/js/main.731e617a.js"
   ]
 }
