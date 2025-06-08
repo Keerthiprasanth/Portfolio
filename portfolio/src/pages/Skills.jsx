@@ -12,8 +12,10 @@ import MongoDB_logo from "../images/MongoDB_logo2.png";
 import TailwindCSS_logo from "../images/TailwindCSS_logo.svg";
 // import Bootstrap_logo from "../images/Bootstrap_logo.svg";
 import Git_logo from "../images/Git_logo.png";
-import GitHub_logo from "../images/GitHub_logo.png";
-import Netlify_logo from "../images/Netlify_logo.svg";
+// import GitHub_logo from "../images/GitHub_logo.png";
+// import Netlify_logo from "../images/Netlify_logo.svg";
+import Asana_logo from "../images/Asana_logo.png";
+import Salesforce_logo from "../images/Salesforce_logo.png";
 
 function Skills({ isLightMode }) {
   const skillsRef = useRef(null);
@@ -57,6 +59,16 @@ function Skills({ isLightMode }) {
       logo: MongoDB_logo,
     },
     {
+      name: "Asana",
+      // logo: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+      logo: Asana_logo,
+    },
+    {
+      name: "Salesforce",
+      // logo: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+      logo: Salesforce_logo,
+    },
+    {
       name: "Java",
       // logo: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png",
       logo: Java_logo,
@@ -75,23 +87,23 @@ function Skills({ isLightMode }) {
     // {
     //   name: "Bootstrap",
     //   // logo: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
-    //   logo: Bootstrap_logo,
+    //   // logo: Bootstrap_logo,
     // },
-    {
-      name: "Netlify",
-      // logo: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
-      logo: Netlify_logo,
-    },
+    // {
+    //   name: "Netlify",
+    //   // logo: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+    //   logo: Netlify_logo,
+    // },
     {
       name: "Git",
       // logo: "https://book.git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
       logo: Git_logo,
     },
-    {
-      name: "GitHub",
-      // logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-      logo: GitHub_logo,
-    },
+    // {
+    //   name: "GitHub",
+    //   // logo: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    //   logo: GitHub_logo,
+    // },
   ];
 
   useEffect(() => {
@@ -128,10 +140,10 @@ function Skills({ isLightMode }) {
         <div className="max-w-lg md:max-w-screen-xl text-center mb-4 md:mb-10">
           <p className="mb-2">
             I am a passionate Full-Stack Developer with a knack for building
-            scalable, efficient, and user-friendly web and android applications. With a
-            strong foundation in frontend and backend development, I specialize
-            in crafting seamless digital experiences that bridge the gap between
-            innovation and functionality.
+            scalable, efficient, and user-friendly web and android applications.
+            With a strong foundation in frontend and backend development, I
+            specialize in crafting seamless digital experiences that bridge the
+            gap between innovation and functionality.
           </p>
           <p>
             As a software engineer, I've honed my skills in various technologies
